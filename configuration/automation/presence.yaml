@@ -1,0 +1,9 @@
+---
+- alias: 'Leaving'
+  trigger:
+    - platform: state
+      entity_id: group.all_devices
+      to: 'not_home'
+  action:
+    service: scene.turn_on
+    entity_id: scene.leaving

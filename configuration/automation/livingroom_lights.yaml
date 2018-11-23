@@ -1,0 +1,13 @@
+---
+- alias: 'Living room lights on when sunset and presence'
+  trigger:
+    platform: sun
+    event: sunset
+    offset: "-00:45:00"
+  condition:
+    condition: state
+    entity_id: group.all_devices
+    state: home
+  action:
+    service: scene.turn_on
+    entity_id: scene.watch_tv

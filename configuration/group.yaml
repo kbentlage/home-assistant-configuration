@@ -1,0 +1,100 @@
+---
+default_view:
+  icon: mdi:home
+  view: True
+  entities:
+    - group.scene
+    - group.settings
+    - group.weather
+    - group.people
+
+# Floors 
+downstairs:
+  name: Beneden
+  view: yes
+  entities:
+    - group.livingroom
+    - group.garden
+    
+upstairs:
+  name: Boven
+  view: yes
+  entities:
+    - group.bedroom
+    - group.office
+    
+house:
+  name: Huis
+  view: yes
+  entities:
+    - group.energy_usage
+    - group.device_usage
+
+# Rooms 
+livingroom:
+  name: Woonkamer
+  entities:
+    - switch.livingroom_lamp_tv
+    - switch.livingroom_lamp_dresser
+    
+garden:
+  name: Tuin
+  entities:
+    - switch.lamp_garden_backyard
+    
+bedroom:
+  name: Slaapkamer
+  entities:
+    - switch.bedroom_lamp_tv
+    
+office:
+  name: Kantoor
+  entities:
+    - switch.office_lamp_desk
+
+scene:
+  name: Scenes
+  entities:
+    - scene.leaving
+    - scene.watch_tv
+    
+settings:
+  name: Instellingen
+  entities:
+    - input_boolean.night_mode
+
+weather:
+  name: Weer
+  entities:
+    - sensor.br_temperature
+    - sensor.br_symbol
+    - sun.sun
+    
+energy_usage:
+  name: Verbruik
+  entities:
+    - sensor.power_usage
+    - sensor.power_usage_low
+    - sensor.power_usage_high
+    - sensor.power_generated_low
+    - sensor.power_generated_high
+    - sensor.gas_usage
+    
+device_usage:
+  name: Verbruik apparaten
+  entities:
+    - sensor.fusebox_server_usage
+    - sensor.livingroom_lamp_tv_usage
+    - sensor.livingroom_lamp_dresser_usage
+    - sensor.bedroom_lamp_tv_usage
+    - sensor.office_lamp_desk_usage
+    - sensor.shed_fridge_usage
+    - sensor.attic_freezer_usage
+    - sensor.attic_washingmachine_usage
+    
+people:
+  name: Personen
+  entities:
+    - device_tracker.iphonekevin_app
+    - device_tracker.iphoneamrita_app
+    #- device_tracker.318i

@@ -1,0 +1,94 @@
+---
+# Sun
+sun.sun:
+  friendly_name: Zon
+
+# Scene
+scene.leaving:
+  friendly_name: Vertrekken
+  icon: mdi:home-lock
+scene.night_mode:
+  friendly_name: Slaapstand
+  icon: mdi:power-sleep
+scene.watch_tv:
+  friendly_name: TV kijken
+  icon: mdi:television
+  
+# Sensor
+sensor.br_symbol:
+  friendly_name: Voorspelling
+sensor.br_temperature:
+  friendly_name: Temperatuur
+  device_class: temperature
+sensor.power_usage:
+  friendly_name: Stroomverbruik
+  icon: mdi:power-socket-eu
+sensor.power_usage_low:
+  friendly_name: Meterstand stroom verbruik (laag)
+  icon: mdi:flash
+sensor.power_usage_high:
+  friendly_name: Meterstand stroom verbruik (hoog)
+  icon: mdi:flash
+sensor.power_generated_low:
+  friendly_name: Meterstand stroom opgewekt (laag)
+  icon: mdi:solar-power
+sensor.power_generated_high:
+  friendly_name: Meterstand stroom opgewekt (high)
+  icon: mdi:solar-power
+sensor.gas_usage:
+  friendly_name: Meterstand gas
+  icon: mdi:fire
+  
+# Sensor usage
+sensor.fusebox_server_usage:
+  friendly_name: Server
+  icon: mdi:server
+sensor.livingroom_lamp_tv_usage:
+  friendly_name: Lamp TV
+  icon: mdi:floor-lamp
+sensor.livingroom_lamp_dresser_usage:
+  friendly_name: Lamp dressoir
+  icon: mdi:lamp
+sensor.bedroom_lamp_tv_usage:
+  friendly_name: Lamp TV
+  icon: mdi:floor-lamp
+sensor.office_lamp_desk_usage:
+  friendly_name: Lamp bureau
+  icon: mdi:desk-lamp
+sensor.shed_fridge_usage:
+  friendly_name: Koelkast
+  icon: mdi:fridge
+sensor.attic_freezer_usage:
+  friendly_name: Vrieskast
+  icon: mdi:fridge
+sensor.attic_washingmachine_usage:
+  friendly_name: Wasmachine
+  icon: mdi:washing-machine
+  
+# Switch
+switch.livingroom_lamp_tv:
+  friendly_name: Lamp TV
+  icon: mdi:floor-lamp
+switch.livingroom_lamp_dresser:
+  friendly_name: Lamp dressoir
+  icon: mdi:lamp
+switch.bedroom_lamp_tv:
+  friendly_name: Lamp TV
+  icon: mdi:floor-lamp
+switch.office_lamp_desk:
+  friendly_name: Lamp bureau
+  icon: mdi:desk-lamp
+switch.lamp_garden_backyard:
+  friendly_name: Buitenlamp achter
+  icon: mdi:lightbulb
+  
+# Device Tracker
+device_tracker.iphonekevin_app:
+  friendly_name: Kevin
+  icon: mdi:cellphone-iphone
+device_tracker.iphoneamrita_app:
+  friendly_name: Amrita
+  icon: mdi:cellphone-iphone
+device_tracker.318i:
+  friendly_name: Auto
+  icon: mdi:car-sports

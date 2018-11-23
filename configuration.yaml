@@ -1,0 +1,83 @@
+---
+homeassistant:
+  name: !secret home_name
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  elevation: 0
+  unit_system: metric
+  time_zone: Europe/Amsterdam
+  customize: !include configuration/customize.yaml
+
+frontend:
+
+http:
+  api_password: !secret api_password
+
+config:
+
+updater:
+
+conversation:
+
+history:
+
+logbook:
+
+map:
+
+sun:
+
+ios:
+
+# MQTT
+mqtt:
+  broker: 127.0.0.1
+  client_id: home-assistant
+  keepalive: 60
+  birth_message:
+    topic: 'ha/hass/status'
+    payload: 'online'
+    qos: 1
+    retain: true
+  will_message:
+    topic: 'ha/hass/status'
+    payload: 'offline'
+    qos: 1
+    retain: true
+
+# BMW
+#bmw_connected_drive:
+#  bmw:
+#    username: !secret bmw_username
+#    password: !secret bmw_password
+#    region: rest_of_world
+
+# Media Player
+media_player:
+  - platform: kodi
+    name: Kodi
+    host: !secret kodi_host
+    port: !secret kodi_port
+    username: !secret kodi_username
+    password: !secret kodi_password
+    
+# Sonos
+sonos:
+  media_player:
+    interface_addr: !secret sonos_host
+
+# Zwave 
+zwave:
+  usb_path: /dev/ttyACM0
+  device_config: !include configuration/zwave_device_config.yaml
+
+sensor: !include configuration/sensor.yaml 
+switch: !include configuration/switch.yaml
+group: !include configuration/group.yaml
+zone: !include configuration/zone.yaml
+scene: !include configuration/scene.yaml
+automation: !include_dir_merge_list configuration/automation/
+input_boolean: !include configuration/input_boolean.yaml
+notify: !include configuration/notify.yaml
+script: !include configuration/script.yaml
+device_tracker: !include configuration/device_tracker.yaml

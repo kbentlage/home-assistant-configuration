@@ -1,0 +1,12 @@
+---
+- platform: unifi
+  host: !secret unifi_host
+  port: !secret unifi_port
+  verify_ssl: false
+  username: !secret unifi_username
+  password: !secret unifi_password
+  ssid_filter: !secret unifi_ssid_filter
+  monitored_conditions:
+    - last_seen
+    - first_seen
+    - signal
