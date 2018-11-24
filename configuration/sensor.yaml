@@ -6,7 +6,6 @@
     - humidity
     - temperature
     - windspeed
-    - winddirection
     - pressure
     - condition
       

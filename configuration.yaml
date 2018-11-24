@@ -62,9 +62,9 @@ media_player:
     password: !secret kodi_password
     
 # Sonos
-sonos:
-  media_player:
-    interface_addr: !secret sonos_host
+#sonos:
+#  media_player:
+#    interface_addr: !secret sonos_host
 
 # Zwave 
 zwave:
