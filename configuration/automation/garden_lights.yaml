@@ -4,7 +4,7 @@
     - platform: sun
       event: sunset
   action:
-    - service: light.turn_on
+    - service: switch.turn_on
       data:
         entity_id: 
           - switch.lamp_garden_backyard
@@ -14,7 +14,7 @@
     - platform: sun
       event: sunrise
   action:
-    - service: light.turn_off
+    - service: switch.turn_off
       data:
         entity_id: 
           - switch.lamp_garden_backyard
