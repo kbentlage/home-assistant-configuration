@@ -45,54 +45,54 @@
   name: fusebox_server_usage
   state_topic: 'plugwise2py/state/power/000D6F0001A44529'
   unit_of_measurement: 'W'
-  value_template: '{{ value_json.power }}'
+  value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
   sensor_class: power
   
 - platform: mqtt
   name: livingroom_lamp_tv_usage
   state_topic: 'plugwise2py/state/power/000D6F000397470B'
   unit_of_measurement: 'W'
-  value_template: '{{ value_json.power }}'
+  value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
   sensor_class: power
   
 - platform: mqtt
   name: livingroom_lamp_dresser_usage
   state_topic: 'plugwise2py/state/power/000D6F00039791BC'
   unit_of_measurement: 'W'
-  value_template: '{{ value_json.power }}'
+  value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
   sensor_class: power
   
 - platform: mqtt
   name: bedroom_lamp_tv_usage
   state_topic: 'plugwise2py/state/power/000D6F000059A9F1'
   unit_of_measurement: 'W'
-  value_template: '{{ value_json.power }}'
+  value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
   sensor_class: power
   
 - platform: mqtt
   name: office_lamp_desk_usage
   state_topic: 'plugwise2py/state/power/000D6F00004ED25A'
   unit_of_measurement: 'W'
-  value_template: '{{ value_json.power }}'
+  value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
   sensor_class: power
   
 - platform: mqtt
-  name: shed_fridge_usage
+  name: kitchen_dishwasher_usage
   state_topic: 'plugwise2py/state/power/000D6F000397AAAE'
   unit_of_measurement: 'W'
-  value_template: '{{ value_json.power }}'
+  value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
   sensor_class: power
   
 - platform: mqtt
   name: attic_freezer_usage
   state_topic: 'plugwise2py/state/power/000D6F0003979084'
   unit_of_measurement: 'W'
-  value_template: '{{ value_json.power }}'
+  value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
   sensor_class: power
   
 - platform: mqtt
   name: attic_washingmachine_usage
   state_topic: 'plugwise2py/state/power/000D6F00004EF088'
   unit_of_measurement: 'W'
-  value_template: '{{ value_json.power }}'
+  value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
   sensor_class: power

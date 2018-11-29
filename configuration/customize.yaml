@@ -55,9 +55,9 @@ sensor.bedroom_lamp_tv_usage:
 sensor.office_lamp_desk_usage:
   friendly_name: Lamp bureau
   icon: mdi:desk-lamp
-sensor.shed_fridge_usage:
-  friendly_name: Koelkast
-  icon: mdi:fridge
+sensor.kitchen_dishwasher_usage:
+  friendly_name: Vaatwasser
+  icon: mdi:dishwasher
 sensor.attic_freezer_usage:
   friendly_name: Vrieskast
   icon: mdi:fridge

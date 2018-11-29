@@ -1,4 +1,14 @@
 ---
+- name: email_kevin
+  platform: smtp
+  server: !secret smtp_host
+  port: !secret smtp_port
+  encryption: none
+  timeout: 15
+  sender: !secret smtp_sender
+  recipient: !secret smtp_recipient
+  sender_name: Home Assistant
+    
 - name: pushover_kevin
   platform: pushover
   api_key: !secret pushover_api_key
