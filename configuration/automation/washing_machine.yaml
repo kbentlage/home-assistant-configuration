@@ -82,10 +82,6 @@
       entity_id: sensor.washing_machine_status
       to: Klaar
   action:
-    - service: notify.email_kevin
-      data:
-        title: 'Wasmachine is klaar'
-        message: 'Wasmachine is klaar'
     - service: notify.ios_iphonekevin_app
       data:
         title: 'Wasmachine is klaar'
