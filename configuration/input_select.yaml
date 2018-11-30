@@ -6,3 +6,13 @@ washing_machine_status:
     - Afronden
     - Klaar
   initial: Uit
+  
+ventilation_status:
+  name: Mechanische ventilatie status
+  options:
+    - Uit
+    - Stand 1
+    - Stand 2
+    - Stand 3
+    - Stand 4
+  initial: Uit

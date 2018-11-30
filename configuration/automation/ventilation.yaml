@@ -1,0 +1,143 @@
+- alias: Set ventilation "Uit" when usage detected
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.attic_ventilation_usage
+      below: 1
+      for:
+        minutes: 1
+  condition:
+    condition: or
+    conditions:
+      - condition: state
+        entity_id: sensor.ventilation_status
+        state: 'Stand 1'
+      - condition: state
+        entity_id: sensor.ventilation_status
+        state: 'Stand 2'
+      - condition: state
+        entity_id: sensor.ventilation_status
+        state: 'Stand 3'
+      - condition: state
+        entity_id: sensor.ventilation_status
+        state: 'Stand 4'
+  action:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.ventilation_status
+        option: 'Uit'
+        
+- alias: Set ventilation "Stand 1" when usage detected
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.attic_ventilation_usage
+      above: 1
+      below: 3.5
+      for:
+        minutes: 1
+  condition:
+    condition: or
+    conditions:
+      - condition: state
+        entity_id: sensor.ventilation_status
+        state: 'Uit'
+      - condition: state
+        entity_id: sensor.ventilation_status
+        state: 'Stand 2'
+      - condition: state
+        entity_id: sensor.ventilation_status
+        state: 'Stand 3'
+      - condition: state
+        entity_id: sensor.ventilation_status
+        state: 'Stand 4'
+  action:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.ventilation_status
+        option: 'Stand 1'
+        
+- alias: Set ventilation "Stand 2" when usage detected
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.attic_ventilation_usage
+      above: 3.5
+      below: 10
+      for:
+        minutes: 1
+  condition:
+    condition: or
+    conditions:
+      - condition: state
+        entity_id: sensor.ventilation_status
+        state: 'Uit'
+      - condition: state
+        entity_id: sensor.ventilation_status
+        state: 'Stand 1'
+      - condition: state
+        entity_id: sensor.ventilation_status
+        state: 'Stand 3'
+      - condition: state
+        entity_id: sensor.ventilation_status
+        state: 'Stand 4'
+  action:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.ventilation_status
+        option: 'Stand 2'
+        
+- alias: Set ventilation "Stand 3" when usage detected
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.attic_ventilation_usage
+      above: 10
+      below: 22
+      for:
+        minutes: 1
+  condition:
+    condition: or
+    conditions:
+      - condition: state
+        entity_id: sensor.ventilation_status
+        state: 'Uit'
+      - condition: state
+        entity_id: sensor.ventilation_status
+        state: 'Stand 1'
+      - condition: state
+        entity_id: sensor.ventilation_status
+        state: 'Stand 2'
+      - condition: state
+        entity_id: sensor.ventilation_status
+        state: 'Stand 4'
+  action:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.ventilation_status
+        option: 'Stand 3'
+        
+- alias: Set ventilation "Stand 4" when usage detected
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.attic_ventilation_usage
+      above: 22
+      below: 40
+      for:
+        minutes: 1
+  condition:
+    condition: or
+    conditions:
+      - condition: state
+        entity_id: sensor.ventilation_status
+        state: 'Uit'
+      - condition: state
+        entity_id: sensor.ventilation_status
+        state: 'Stand 1'
+      - condition: state
+        entity_id: sensor.ventilation_status
+        state: 'Stand 2'
+      - condition: state
+        entity_id: sensor.ventilation_status
+        state: 'Stand 3'
+  action:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.ventilation_status
+        option: 'Stand 4'

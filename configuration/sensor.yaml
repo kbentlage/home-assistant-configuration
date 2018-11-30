@@ -111,8 +111,13 @@
   value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
   sensor_class: power
   
-# Washingmachine
+# Appliances
 - platform: template
   sensors:
     washing_machine_status:
       value_template: '{{ states.input_select.washing_machine_status.state}}'
+      
+- platform: template
+  sensors:
+    ventilation_status:
+      value_template: '{{ states.input_select.ventilation_status.state}}'

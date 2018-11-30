@@ -76,6 +76,10 @@ sensor.washing_machine_status:
   friendly_name: Wasmachine status
   icon: mdi:washing-machine
   
+sensor.ventilation_status:
+  friendly_name: Mechanische ventilatie status
+  icon: mdi:fan
+  
 # Switch
 switch.livingroom_lamp_tv:
   friendly_name: Lamp TV

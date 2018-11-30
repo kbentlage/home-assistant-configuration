@@ -57,6 +57,7 @@ attic:
   name: Zolder
   entities:
     - sensor.washing_machine_status
+    - sensor.ventilation_status
 
 scene:
   name: Scenes
