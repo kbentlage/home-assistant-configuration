@@ -64,6 +64,17 @@ sensor.attic_freezer_usage:
 sensor.attic_washingmachine_usage:
   friendly_name: Wasmachine
   icon: mdi:washing-machine
+sensor.attic_ventilation_usage:
+  friendly_name: Mechanische ventilatie
+  icon: mdi:fan
+sensor.attic_heating_usage:
+  friendly_name: CV ketel
+  icon: mdi:fire
+  
+# Wasmachine
+sensor.washing_machine_status:
+  friendly_name: Wasmachine status
+  icon: mdi:washing-machine
   
 # Switch
 switch.livingroom_lamp_tv:

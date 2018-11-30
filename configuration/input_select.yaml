@@ -1,0 +1,8 @@
+washing_machine_status:
+  name: Wasmachine status
+  options:
+    - Uit
+    - Draait
+    - Afronden
+    - Klaar
+  initial: Uit

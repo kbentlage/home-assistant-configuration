@@ -78,6 +78,7 @@ zone: !include configuration/zone.yaml
 scene: !include configuration/scene.yaml
 automation: !include_dir_merge_list configuration/automation/
 input_boolean: !include configuration/input_boolean.yaml
+input_select: !include configuration/input_select.yaml
 notify: !include configuration/notify.yaml
 script: !include configuration/script.yaml
 device_tracker: !include configuration/device_tracker.yaml

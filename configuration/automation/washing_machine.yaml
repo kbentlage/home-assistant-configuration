@@ -1,0 +1,92 @@
+- alias: Set washing machine "Draait" when power detected
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.attic_washingmachine_usage
+      above: 10
+  condition:
+    condition: or
+    conditions:
+      - condition: state
+        entity_id: sensor.washing_machine_status
+        state: Uit
+      - condition: state
+        entity_id: sensor.washing_machine_status
+        state: Klaar
+      - condition: state
+        entity_id: sensor.washing_machine_status
+        state: Afronden
+  action:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.washing_machine_status
+        option: Draait
+        
+- alias: Set washing machine "Afronden" when power drops
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.attic_washingmachine_usage
+      above: 1
+      below: 5
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: sensor.washing_machine_status
+        state: Draait
+  action:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.washing_machine_status
+        option: Afronden
+        
+- alias: Set washing machine "Klaar" after timeout
+  trigger:
+    - platform: state
+      entity_id: input_select.washing_machine_status
+      to: Afronden
+      for:
+        minutes: 1
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: sensor.washing_machine_status
+        state: Afronden
+  action:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.washing_machine_status
+        option: Klaar
+        
+- alias: Set washing machine "Uit" when power drops to zero
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.attic_washingmachine_usage
+      below: 1
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: sensor.washing_machine_status
+        state: Klaar
+  action:
+    - service: input_select.select_option
+      data:
+        entity_id: input_select.washing_machine_status
+        option: Uit
+        
+## Alert
+- alias: Send alert when washing machine is finished
+  trigger:
+    - platform: state
+      entity_id: sensor.washing_machine_status
+      to: Klaar
+  action:
+    - service: notify.email_kevin
+      data:
+        title: 'Wasmachine is klaar'
+        message: 'Wasmachine is klaar'
+    - service: notify.ios_iphonekevin_app
+      data:
+        title: 'Wasmachine is klaar'
+        message: 'Wasmachine is klaar'

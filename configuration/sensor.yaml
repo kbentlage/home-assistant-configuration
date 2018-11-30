@@ -96,3 +96,23 @@
   unit_of_measurement: 'W'
   value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
   sensor_class: power
+  
+- platform: mqtt
+  name: attic_ventilation_usage
+  state_topic: 'plugwise2py/state/power/000D6F000397465D'
+  unit_of_measurement: 'W'
+  value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
+  sensor_class: power
+  
+- platform: mqtt
+  name: attic_heating_usage
+  state_topic: 'plugwise2py/state/power/000D6F00039791E0'
+  unit_of_measurement: 'W'
+  value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
+  sensor_class: power
+  
+# Washingmachine
+- platform: template
+  sensors:
+    washing_machine_status:
+      value_template: '{{ states.input_select.washing_machine_status.state}}'

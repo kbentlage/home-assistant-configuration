@@ -22,6 +22,7 @@ upstairs:
   entities:
     - group.bedroom
     - group.office
+    - group.attic
     
 house:
   name: Huis
@@ -51,6 +52,11 @@ office:
   name: Kantoor
   entities:
     - switch.office_lamp_desk
+    
+attic:
+  name: Zolder
+  entities:
+    - sensor.washing_machine_status
 
 scene:
   name: Scenes
@@ -91,6 +97,8 @@ device_usage:
     - sensor.kitchen_dishwasher_usage
     - sensor.attic_freezer_usage
     - sensor.attic_washingmachine_usage
+    - sensor.attic_ventilation_usage
+    - sensor.attic_heating_usage
     
 people:
   name: Personen
