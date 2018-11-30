@@ -1,3 +1,4 @@
+---
 - alias: Set ventilation "Uit" when usage detected
   trigger:
     - platform: numeric_state

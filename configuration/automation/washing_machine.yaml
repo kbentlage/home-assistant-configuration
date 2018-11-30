@@ -1,3 +1,4 @@
+---
 - alias: Set washing machine "Draait" when power detected
   trigger:
     - platform: numeric_state
