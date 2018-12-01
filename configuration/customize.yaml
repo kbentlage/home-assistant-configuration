@@ -71,6 +71,11 @@ sensor.attic_heating_usage:
   friendly_name: CV ketel
   icon: mdi:fire
   
+# Binary sensor
+binary_sensor.hallway_outside_door:
+  friendly_name: Buitendeur
+  device_class: door
+    
 # Wasmachine
 sensor.washing_machine_status:
   friendly_name: Wasmachine status
