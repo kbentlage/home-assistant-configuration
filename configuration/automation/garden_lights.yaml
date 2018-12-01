@@ -7,7 +7,7 @@
     - service: switch.turn_on
       data:
         entity_id: 
-          - switch.lamp_garden_backyard
+          - switch.downstairs_backyard_light
       
 - alias: 'Garden lights off when sunrise'
   trigger:
@@ -17,4 +17,4 @@
     - service: switch.turn_off
       data:
         entity_id: 
-          - switch.lamp_garden_backyard
+          - switch.downstairs_backyard_light

@@ -72,7 +72,7 @@ sensor.attic_heating_usage:
   icon: mdi:fire
   
 # Binary sensor
-binary_sensor.hallway_outside_door:
+binary_sensor.downstairs_hallway_frontdoor:
   friendly_name: Buitendeur
   device_class: door
     
@@ -98,7 +98,7 @@ switch.bedroom_lamp_tv:
 switch.office_lamp_desk:
   friendly_name: Lamp bureau
   icon: mdi:desk-lamp
-switch.lamp_garden_backyard:
+switch.downstairs_backyard_light:
   friendly_name: Buitenlamp achter
   icon: mdi:lightbulb
   

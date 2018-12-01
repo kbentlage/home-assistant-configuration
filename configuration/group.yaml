@@ -42,12 +42,12 @@ livingroom:
 hallway:
   name: Gang
   entities:
-    - binary_sensor.hallway_outside_door
+    - binary_sensor.downstairs_hallway_frontdoor
 
 garden:
   name: Tuin
   entities:
-    - switch.lamp_garden_backyard
+    - switch.downstairs_backyard_light
     
 bedroom:
   name: Slaapkamer
