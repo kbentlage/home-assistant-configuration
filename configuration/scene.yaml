@@ -2,18 +2,18 @@
 - name: leaving
   entities:
     switch.livingroom_lamp_tv: false
-    switch.livingroom_lamp_dresser: false
+    light.downstairs_living_dresser: false
     switch.bedroom_lamp_tv: false
     switch.office_lamp_desk: false
     
 - name: night_mode
   entities:
     switch.livingroom_lamp_tv: false
-    switch.livingroom_lamp_dresser: false
+    light.downstairs_living_dresser: false
     switch.bedroom_lamp_tv: false
     switch.office_lamp_desk: false
       
 - name: watch_tv
   entities:
     switch.livingroom_lamp_tv: true
-    switch.livingroom_lamp_dresser: true
+    light.downstairs_living_dresser: true

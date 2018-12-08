@@ -1,0 +1,40 @@
+---
+- alias: 'Christmas lights on when sunset'
+  trigger:
+    - platform: sun
+      event: sunset
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id: 
+          - switch.downstairs_backyard_christmaslights
+          
+- alias: 'Christmas lights off at night'
+  trigger:
+    - platform: time
+      at: '02:00'
+  action:
+    - service: switch.turn_off
+      data:
+        entity_id: 
+          - switch.downstairs_backyard_christmaslights
+          
+- alias: 'Christmas lights on at morning'
+  trigger:
+    - platform: time
+      at: '06:00'
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id: 
+          - switch.downstairs_backyard_christmaslights
+      
+- alias: 'Christmas lights off when sunrise'
+  trigger:
+    - platform: sun
+      event: sunrise
+  action:
+    - service: switch.turn_off
+      data:
+        entity_id: 
+          - switch.downstairs_backyard_christmaslights

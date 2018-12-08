@@ -70,17 +70,24 @@ sensor.attic_ventilation_usage:
 sensor.attic_heating_usage:
   friendly_name: CV ketel
   icon: mdi:fire
+sensor.downstairs_living_motion_temperature:
+  friendly_name: Temperatuur
+sensor.downstairs_living_motion_luminance:
+  friendly_name: Licht
+sensor.downstairs_living_motion_seismic_intensity:
+  friendly_name: Trilling
   
 # Binary sensor
 binary_sensor.downstairs_hallway_frontdoor:
   friendly_name: Buitendeur
   device_class: door
+binary_sensor.downstairs_living_motion:
+  friendly_name: Beweging
     
 # Wasmachine
 sensor.washing_machine_status:
   friendly_name: Wasmachine status
   icon: mdi:washing-machine
-  
 sensor.ventilation_status:
   friendly_name: Mechanische ventilatie status
   icon: mdi:fan
@@ -89,9 +96,6 @@ sensor.ventilation_status:
 switch.livingroom_lamp_tv:
   friendly_name: Lamp TV
   icon: mdi:floor-lamp
-switch.livingroom_lamp_dresser:
-  friendly_name: Lamp dressoir
-  icon: mdi:lamp
 switch.bedroom_lamp_tv:
   friendly_name: Lamp TV
   icon: mdi:floor-lamp
@@ -101,6 +105,14 @@ switch.office_lamp_desk:
 switch.downstairs_backyard_light:
   friendly_name: Buitenlamp achter
   icon: mdi:lightbulb
+switch.downstairs_backyard_christmaslights:
+  friendly_name: Kerstverlichting achter
+  icon: mdi:lightbulb
+  
+# Light
+light.downstairs_living_dresser:
+  friendly_name: Lamp dressoir
+  icon: mdi:lamp
   
 # Device Tracker
 device_tracker.iphonekevin_app:

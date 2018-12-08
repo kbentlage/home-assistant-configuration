@@ -36,8 +36,12 @@ house:
 livingroom:
   name: Woonkamer
   entities:
+    - binary_sensor.downstairs_living_motion
+    - sensor.downstairs_living_motion_temperature
+    - sensor.downstairs_living_motion_luminance
+    - sensor.downstairs_living_motion_seismic_intensity
     - switch.livingroom_lamp_tv
-    - switch.livingroom_lamp_dresser
+    - light.downstairs_living_dresser
 
 hallway:
   name: Gang
@@ -48,6 +52,7 @@ garden:
   name: Tuin
   entities:
     - switch.downstairs_backyard_light
+    - switch.downstairs_backyard_christmaslights
     
 bedroom:
   name: Slaapkamer
