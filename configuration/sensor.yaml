@@ -49,20 +49,6 @@
   sensor_class: power
   
 - platform: mqtt
-  name: livingroom_lamp_tv_usage
-  state_topic: 'plugwise2py/state/power/000D6F000397470B'
-  unit_of_measurement: 'W'
-  value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
-  sensor_class: power
-  
-- platform: mqtt
-  name: livingroom_lamp_dresser_usage
-  state_topic: 'plugwise2py/state/power/000D6F00039791BC'
-  unit_of_measurement: 'W'
-  value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
-  sensor_class: power
-  
-- platform: mqtt
   name: bedroom_lamp_tv_usage
   state_topic: 'plugwise2py/state/power/000D6F000059A9F1'
   unit_of_measurement: 'W'

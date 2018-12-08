@@ -7,7 +7,8 @@
   action:
     - service: switch.turn_on
       data:
-        entity_id: 
+        entity_id:
+          - switch.downstairs_frontyard_christmaslights
           - switch.downstairs_backyard_christmaslights
           
 - alias: 'Christmas lights off at night'
@@ -17,7 +18,8 @@
   action:
     - service: switch.turn_off
       data:
-        entity_id: 
+        entity_id:
+          - switch.downstairs_frontyard_christmaslights
           - switch.downstairs_backyard_christmaslights
           
 - alias: 'Christmas lights on at morning'
@@ -28,6 +30,7 @@
     - service: switch.turn_on
       data:
         entity_id: 
+          - switch.downstairs_frontyard_christmaslights
           - switch.downstairs_backyard_christmaslights
       
 - alias: 'Christmas lights off when sunrise'
@@ -38,4 +41,5 @@
     - service: switch.turn_off
       data:
         entity_id: 
+          - switch.downstairs_frontyard_christmaslights
           - switch.downstairs_backyard_christmaslights

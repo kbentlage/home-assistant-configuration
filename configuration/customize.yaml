@@ -43,12 +43,6 @@ sensor.gas_usage:
 sensor.fusebox_server_usage:
   friendly_name: Server
   icon: mdi:server
-sensor.livingroom_lamp_tv_usage:
-  friendly_name: Lamp TV
-  icon: mdi:floor-lamp
-sensor.livingroom_lamp_dresser_usage:
-  friendly_name: Lamp dressoir
-  icon: mdi:lamp
 sensor.bedroom_lamp_tv_usage:
   friendly_name: Lamp TV
   icon: mdi:floor-lamp
@@ -102,9 +96,15 @@ switch.office_lamp_desk:
 switch.downstairs_backyard_light:
   friendly_name: Buitenlamp achter
   icon: mdi:lightbulb
+switch.downstairs_frontyard_christmaslights:
+  friendly_name: Kerstverlichting voor
+  icon: mdi:pine-tree
 switch.downstairs_backyard_christmaslights:
   friendly_name: Kerstverlichting achter
-  icon: mdi:lightbulb
+  icon: mdi:pine-tree
+switch.downstairs_living_christmastree:
+  friendly_name: Kerstboom
+  icon: mdi:pine-tree
   
 # Light
 light.downstairs_living_tv:

@@ -42,6 +42,7 @@ livingroom:
     - sensor.downstairs_living_motion_seismic_intensity
     - light.downstairs_living_tv
     - light.downstairs_living_dresser
+    - switch.downstairs_living_christmastree
 
 hallway:
   name: Gang
@@ -52,6 +53,7 @@ garden:
   name: Tuin
   entities:
     - switch.downstairs_backyard_light
+    - switch.downstairs_frontyard_christmaslights
     - switch.downstairs_backyard_christmaslights
     
 bedroom:
@@ -102,8 +104,6 @@ device_usage:
   name: Verbruik apparaten
   entities:
     - sensor.fusebox_server_usage
-    - sensor.livingroom_lamp_tv_usage
-    - sensor.livingroom_lamp_dresser_usage
     - sensor.bedroom_lamp_tv_usage
     - sensor.office_lamp_desk_usage
     - sensor.kitchen_dishwasher_usage
