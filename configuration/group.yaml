@@ -40,7 +40,7 @@ livingroom:
     - sensor.downstairs_living_motion_temperature
     - sensor.downstairs_living_motion_luminance
     - sensor.downstairs_living_motion_seismic_intensity
-    - switch.livingroom_lamp_tv
+    - light.downstairs_living_tv
     - light.downstairs_living_dresser
 
 hallway:

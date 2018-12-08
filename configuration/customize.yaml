@@ -93,9 +93,6 @@ sensor.ventilation_status:
   icon: mdi:fan
   
 # Switch
-switch.livingroom_lamp_tv:
-  friendly_name: Lamp TV
-  icon: mdi:floor-lamp
 switch.bedroom_lamp_tv:
   friendly_name: Lamp TV
   icon: mdi:floor-lamp
@@ -110,6 +107,9 @@ switch.downstairs_backyard_christmaslights:
   icon: mdi:lightbulb
   
 # Light
+light.downstairs_living_tv:
+  friendly_name: Lamp TV
+  icon: mdi:floor-lamp
 light.downstairs_living_dresser:
   friendly_name: Lamp dressoir
   icon: mdi:lamp
