@@ -1,4 +1,62 @@
 ---
+# Christmas tree lights
+- alias: 'Christmas tree on when night mode disabled'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.night_mode
+      to: 'off'
+  condition:
+    - condition: state
+      entity_id: group.all_devices
+      state: 'home'
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id:
+          - switch.downstairs_living_christmastree
+          
+- alias: 'Christmas tree off when leaving'
+  trigger:
+    - platform: state
+      entity_id: group.all_devices
+      to: 'not_home'
+      for:
+        minutes: 5
+  action:
+    - service: switch.turn_off
+      data:
+        entity_id:
+          - switch.downstairs_living_christmastree
+      
+- alias: 'Christmas tree on when coming home'
+  trigger:
+    - platform: state
+      entity_id: group.all_devices
+      to: 'home'
+      for:
+        minutes: 1
+  condition:
+    - condition: state
+      entity_id: input_boolean.night_mode
+      state: 'off'
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id:
+          - switch.downstairs_living_christmastree
+    
+- alias: 'Christmas tree off when night mode enabled'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.night_mode
+      to: 'on'
+  action:
+    - service: switch.turn_off
+      data:
+        entity_id:
+          - switch.downstairs_living_christmastree
+      
+# Outside lights
 - alias: 'Christmas lights on when sunset'
   trigger:
     - platform: sun
