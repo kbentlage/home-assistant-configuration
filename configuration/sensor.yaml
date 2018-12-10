@@ -83,6 +83,20 @@
   value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
   sensor_class: power
   
+- platform: mqtt
+  name: upstairs_bedroom_charger_kevin
+  state_topic: 'plugwise2py/state/power/000D6F00001C7B58'
+  unit_of_measurement: 'W'
+  value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
+  sensor_class: power
+  
+- platform: mqtt
+  name: upstairs_bedroom_charger_amrita
+  state_topic: 'plugwise2py/state/power/000D6F000038BF7A'
+  unit_of_measurement: 'W'
+  value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
+  sensor_class: power
+  
 # Appliances
 - platform: template
   sensors:

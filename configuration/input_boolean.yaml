@@ -7,3 +7,13 @@ disable_washing_machine_notification:
   name: Disable Washing Machine Notification
   initial: off
   icon: mdi:washing-machine
+  
+phone_charging_kevin:
+  name: Phone Charging Kevin
+  initial: off
+  icon: mdi:battery-charging
+  
+phone_charging_amrita:
+  name: Phone Charging Kevin
+  initial: off
+  icon: mdi:battery-charging

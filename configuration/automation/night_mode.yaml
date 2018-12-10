@@ -1,5 +1,23 @@
 ---
-- alias: 'Activate night mode'
+- alias: 'Activate night mode when charging phone'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.phone_charging_kevin
+      to: 'on'
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: device_tracker.iphonekevin_app
+        state: home
+      - condition: time
+        after: '20:00:00'
+        before: '04:00:00'
+  action:
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.night_mode
+      
+- alias: 'Activate night mode scene when night mode is enabled'
   trigger:
     - platform: state
       entity_id: input_boolean.night_mode

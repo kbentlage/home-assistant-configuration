@@ -1,0 +1,42 @@
+---
+- alias: Phone Kevin is charging
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.upstairs_bedroom_charger_kevin
+      above: 5
+      for:
+        minutes: 1
+  action:
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.phone_charging_kevin
+      
+- alias: Phone Kevin is not charging
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.upstairs_bedroom_charger_kevin
+      below: 2
+      for:
+        minutes: 5
+  action:
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.phone_charging_kevin
+      
+- alias: Phone Amrita is charging
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.upstairs_bedroom_charger_amrita
+      above: 5
+  action:
+    - service: input_boolean.turn_on
+      entity_id: input_boolean.phone_charging_amrita
+      
+- alias: Phone Amrita is not charging
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.upstairs_bedroom_charger_amrita
+      below: 2
+      for:
+        minutes: 1
+  action:
+    - service: input_boolean.turn_off
+      entity_id: input_boolean.phone_charging_amrita
