@@ -96,6 +96,9 @@ switch.office_lamp_desk:
 switch.downstairs_backyard_light:
   friendly_name: Buitenlamp achter
   icon: mdi:lightbulb
+switch.downstairs_frontyard_light:
+  friendly_name: Buitenlamp voor
+  icon: mdi:lightbulb
 switch.downstairs_frontyard_christmaslights:
   friendly_name: Kerstverlichting voor
   icon: mdi:pine-tree

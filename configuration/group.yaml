@@ -52,6 +52,7 @@ hallway:
 garden:
   name: Tuin
   entities:
+    - switch.downstairs_frontyard_light
     - switch.downstairs_backyard_light
     - switch.downstairs_frontyard_christmaslights
     - switch.downstairs_backyard_christmaslights
