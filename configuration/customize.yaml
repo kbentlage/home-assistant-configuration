@@ -10,9 +10,18 @@ scene.leaving:
 scene.night_mode:
   friendly_name: Slaapstand
   icon: mdi:power-sleep
-scene.watch_tv:
+scene.downstairs_living_watchtv:
   friendly_name: TV kijken
   icon: mdi:television
+scene.downstairs_living_evening:
+  friendly_name: Avond
+  icon: mdi:weather-night
+scene.upstairs_bedroom_watchtv:
+  friendly_name: TV kijken
+  icon: mdi:television
+scene.upstairs_bedroom_romantic:
+  friendly_name: Romantisch
+  icon: mdi:heart
   
 # Sensor
 sensor.br_symbol:
@@ -110,6 +119,9 @@ switch.downstairs_living_christmastree:
   icon: mdi:pine-tree
   
 # Light
+light.upstairs_bedroom:
+  friendly_name: Lamp
+  icon: mdi:ceiling-light
 light.downstairs_living_tv:
   friendly_name: Lamp TV
   icon: mdi:floor-lamp

@@ -36,6 +36,8 @@ house:
 livingroom:
   name: Woonkamer
   entities:
+    - scene.downstairs_living_evening
+    - scene.downstairs_living_watchtv
     - binary_sensor.downstairs_living_motion
     - sensor.downstairs_living_motion_temperature
     - sensor.downstairs_living_motion_luminance
@@ -45,7 +47,7 @@ livingroom:
     - switch.downstairs_living_christmastree
 
 hallway:
-  name: Gang
+  name: Hal
   entities:
     - binary_sensor.downstairs_hallway_frontdoor
 
@@ -60,6 +62,9 @@ garden:
 bedroom:
   name: Slaapkamer
   entities:
+    - scene.upstairs_bedroom_watchtv
+    - scene.upstairs_bedroom_romantic
+    - light.upstairs_bedroom
     - switch.bedroom_lamp_tv
     
 office:
@@ -77,7 +82,6 @@ scene:
   name: Scenes
   entities:
     - scene.leaving
-    - scene.watch_tv
     
 settings:
   name: Instellingen
