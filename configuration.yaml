@@ -29,6 +29,12 @@ sun:
 
 ios:
 
+# InfluxDB
+influxdb:
+  host: 127.0.0.1
+  port: 8086
+  database: hass
+
 # MQTT
 mqtt:
   broker: 127.0.0.1
