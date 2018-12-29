@@ -29,6 +29,8 @@ sun:
 
 ios:
 
+wake_on_lan:
+
 # InfluxDB
 influxdb:
   host: 127.0.0.1
@@ -58,15 +60,6 @@ mqtt:
 #    password: !secret bmw_password
 #    region: rest_of_world
 
-# Media Player
-media_player:
-  - platform: kodi
-    name: Kodi
-    host: !secret kodi_host
-    port: !secret kodi_port
-    username: !secret kodi_username
-    password: !secret kodi_password
-    
 # Sonos
 #sonos:
 #  media_player:
@@ -88,3 +81,4 @@ input_select: !include configuration/input_select.yaml
 notify: !include configuration/notify.yaml
 script: !include configuration/script.yaml
 device_tracker: !include configuration/device_tracker.yaml
+media_player: !include configuration/media_player.yaml

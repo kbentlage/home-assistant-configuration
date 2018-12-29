@@ -20,7 +20,7 @@
       brightness: 255
     light.downstairs_living_dresser: 
       state: true
-      brightness: 150
+      brightness: 175
            
 - name: downstairs_living_watchtv
   entities:
@@ -29,7 +29,7 @@
       brightness: 30
     light.downstairs_living_dresser: 
       state: true
-      brightness: 175
+      brightness: 100
 
 - name: upstairs_bedroom_watchtv
   entities:

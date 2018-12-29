@@ -45,6 +45,7 @@ livingroom:
     - light.downstairs_living_tv
     - light.downstairs_living_dresser
     - switch.downstairs_living_christmastree
+    - media_player.tv_living_room
 
 hallway:
   name: Hal

@@ -26,3 +26,27 @@
   action:
     service: scene.turn_on
     entity_id: scene.downstairs_living_evening
+
+- alias: 'Living room lights to TV mode when TV turned on'
+  trigger:
+    platform: state
+    entity_id: media_player.tv_living_room
+    to: 'playing'
+    from: 'off'
+  action:
+    service: scene.turn_on
+    entity_id: scene.downstairs_living_watchtv
+
+- alias: 'Living room lights to evening mode when TV turned off'
+  trigger:
+    platform: state
+    entity_id: media_player.tv_living_room
+    to: 'off'
+    from: 'playing'
+  condition:
+    condition: sun
+    after: sunset
+    after_offset: "-00:45:00"
+  action:
+    service: scene.turn_on
+    entity_id: scene.downstairs_living_evening
