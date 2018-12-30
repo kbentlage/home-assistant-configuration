@@ -1,0 +1,2 @@
+media_player:
+  hosts: !secret sonos_host

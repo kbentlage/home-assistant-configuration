@@ -7,6 +7,7 @@ default_view:
     - group.settings
     - group.weather
     - group.people
+    - group.scripts
 
 # Floors 
 downstairs:
@@ -24,7 +25,7 @@ upstairs:
     - group.bedroom
     - group.office
     - group.attic
-    
+
 house:
   name: Huis
   view: yes
@@ -46,6 +47,7 @@ livingroom:
     - light.downstairs_living_dresser
     - switch.downstairs_living_christmastree
     - media_player.tv_living_room
+    - media_player.heos
 
 hallway:
   name: Hal
@@ -72,6 +74,7 @@ office:
   name: Kantoor
   entities:
     - switch.office_lamp_desk
+    - media_player.kantoor
     
 attic:
   name: Zolder
@@ -122,3 +125,8 @@ people:
     - device_tracker.iphonekevin_app
     - device_tracker.iphoneamrita_app
     #- device_tracker.318i
+
+scripts:
+  name: Scripts
+  entities:
+    - script.sonos_speak

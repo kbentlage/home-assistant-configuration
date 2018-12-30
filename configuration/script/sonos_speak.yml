@@ -1,0 +1,21 @@
+---
+alias: 'Let the Sonos speak a message'
+sequence:
+  - service: media_player.sonos_snapshot
+    data_template:
+      entity_id: media_player.kantoor
+  - service: media_player.sonos_unjoin
+    data_template:
+      entity_id: media_player.kantoor
+  - service: media_player.volume_set
+    data_template:
+      entity_id: media_player.kantoor
+      volume_level: 0.40
+  - service: tts.google_say
+    data_template:
+      entity_id: media_player.kantoor
+      message: "Testing 1, 2, 3"
+  - delay: '00:00:05'
+  - service: media_player.sonos_restore
+    data_template:
+      entity_id: media_player.kantoor

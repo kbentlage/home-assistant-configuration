@@ -31,6 +31,14 @@ ios:
 
 wake_on_lan:
 
+# Text To Speech
+tts:
+  - platform: google
+    language: nl
+    cache: true
+    cache_dir: /tmp/tts
+    time_memory: 300
+
 # InfluxDB
 influxdb:
   host: 127.0.0.1
@@ -60,15 +68,32 @@ mqtt:
 #    password: !secret bmw_password
 #    region: rest_of_world
 
-# Sonos
-#sonos:
-#  media_player:
-#    interface_addr: !secret sonos_host
-
 # Zwave 
 zwave:
   usb_path: /dev/ttyACM0
   device_config: !include configuration/zwave_device_config.yaml
+
+script:
+  sonos_speak:
+    sequence:
+    - service: media_player.sonos_snapshot
+      data_template:
+        entity_id: media_player.kantoor
+    - service: media_player.sonos_unjoin
+      data_template:
+        entity_id: media_player.kantoor
+    - service: media_player.volume_set
+      data_template:
+        entity_id: media_player.kantoor
+        volume_level: 0.40
+    - service: tts.google_say
+      data_template:
+        entity_id: media_player.kantoor
+        message: "Er staat iemand voor de deur."
+    - delay: "00:00:05"
+    - service: media_player.sonos_restore
+      data_template:
+        entity_id: media_player.kantoor
 
 sensor: !include configuration/sensor.yaml 
 switch: !include configuration/switch.yaml
@@ -79,6 +104,6 @@ automation: !include_dir_merge_list configuration/automation/
 input_boolean: !include configuration/input_boolean.yaml
 input_select: !include configuration/input_select.yaml
 notify: !include configuration/notify.yaml
-script: !include configuration/script.yaml
 device_tracker: !include configuration/device_tracker.yaml
+sonos: !include configuration/sonos.yaml
 media_player: !include configuration/media_player.yaml

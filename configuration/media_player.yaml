@@ -1,4 +1,8 @@
 ---
+- platform: heos
+  host: !secret heos_host 
+  name: 'HEOS'
+
 - platform: kodi
   name: Kodi
   host: !secret kodi_host
