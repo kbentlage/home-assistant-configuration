@@ -1,5 +1,6 @@
 ---
-- alias: Set ventilation "Uit" when usage detected
+- alias: 'Set ventilation "Uit" when usage detected'
+  initial_state: on
   trigger:
     - platform: numeric_state
       entity_id: sensor.attic_ventilation_usage
@@ -27,7 +28,8 @@
         entity_id: input_select.ventilation_status
         option: 'Uit'
         
-- alias: Set ventilation "Stand 1" when usage detected
+- alias: 'Set ventilation "Stand 1" when usage detected'
+  initial_state: on
   trigger:
     - platform: numeric_state
       entity_id: sensor.attic_ventilation_usage
@@ -56,7 +58,8 @@
         entity_id: input_select.ventilation_status
         option: 'Stand 1'
         
-- alias: Set ventilation "Stand 2" when usage detected
+- alias: 'Set ventilation "Stand 2" when usage detected'
+  initial_state: on
   trigger:
     - platform: numeric_state
       entity_id: sensor.attic_ventilation_usage
@@ -85,7 +88,8 @@
         entity_id: input_select.ventilation_status
         option: 'Stand 2'
         
-- alias: Set ventilation "Stand 3" when usage detected
+- alias: 'Set ventilation "Stand 3" when usage detected'
+  initial_state: on
   trigger:
     - platform: numeric_state
       entity_id: sensor.attic_ventilation_usage
@@ -114,7 +118,8 @@
         entity_id: input_select.ventilation_status
         option: 'Stand 3'
         
-- alias: Set ventilation "Stand 4" when usage detected
+- alias: 'Set ventilation "Stand 4" when usage detected'
+  initial_state: on
   trigger:
     - platform: numeric_state
       entity_id: sensor.attic_ventilation_usage

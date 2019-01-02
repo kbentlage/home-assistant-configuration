@@ -1,5 +1,6 @@
 ---
 - alias: 'Garden lights on when sunset'
+  initial_state: on
   trigger:
     - platform: sun
       event: sunset
@@ -12,6 +13,7 @@
           - switch.downstairs_backyard_light
       
 - alias: 'Garden lights off when sunrise'
+  initial_state: on
   trigger:
     - platform: sun
       event: sunrise

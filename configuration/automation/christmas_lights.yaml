@@ -1,6 +1,7 @@
 ---
 # Christmas tree lights
 - alias: 'Christmas tree on when night mode disabled'
+  initial_state: on
   trigger:
     - platform: state
       entity_id: input_boolean.night_mode
@@ -16,6 +17,7 @@
           - switch.downstairs_living_christmastree
           
 - alias: 'Christmas tree off when leaving'
+  initial_state: on
   trigger:
     - platform: state
       entity_id: group.all_devices
@@ -29,6 +31,7 @@
           - switch.downstairs_living_christmastree
       
 - alias: 'Christmas tree on when coming home'
+  initial_state: on
   trigger:
     - platform: state
       entity_id: group.all_devices
@@ -46,6 +49,7 @@
           - switch.downstairs_living_christmastree
     
 - alias: 'Christmas tree off when night mode enabled'
+  initial_state: on
   trigger:
     - platform: state
       entity_id: input_boolean.night_mode
@@ -58,6 +62,7 @@
       
 # Outside lights
 - alias: 'Christmas lights on when sunset'
+  initial_state: on
   trigger:
     - platform: sun
       event: sunset
@@ -70,6 +75,7 @@
           - switch.downstairs_backyard_christmaslights
           
 - alias: 'Christmas lights off at night'
+  initial_state: on
   trigger:
     - platform: time
       at: '02:00'
@@ -81,6 +87,7 @@
           - switch.downstairs_backyard_christmaslights
           
 - alias: 'Christmas lights on at morning'
+  initial_state: on
   trigger:
     - platform: time
       at: '06:00'
@@ -92,6 +99,7 @@
           - switch.downstairs_backyard_christmaslights
       
 - alias: 'Christmas lights off when sunrise'
+  initial_state: on
   trigger:
     - platform: sun
       event: sunrise
