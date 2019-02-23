@@ -46,56 +46,48 @@
   state_topic: 'plugwise2py/state/power/000D6F0001A44529'
   unit_of_measurement: 'W'
   value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
-  sensor_class: power
   
 - platform: mqtt
   name: kitchen_dishwasher_usage
   state_topic: 'plugwise2py/state/power/000D6F000397AAAE'
   unit_of_measurement: 'W'
   value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
-  sensor_class: power
   
 - platform: mqtt
   name: attic_freezer_usage
   state_topic: 'plugwise2py/state/power/000D6F0003979084'
   unit_of_measurement: 'W'
   value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
-  sensor_class: power
   
 - platform: mqtt
   name: attic_washingmachine_usage
   state_topic: 'plugwise2py/state/power/000D6F00004EF088'
   unit_of_measurement: 'W'
   value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
-  sensor_class: power
   
 - platform: mqtt
   name: attic_ventilation_usage
   state_topic: 'plugwise2py/state/power/000D6F000397465D'
   unit_of_measurement: 'W'
   value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
-  sensor_class: power
   
 - platform: mqtt
   name: attic_heating_usage
   state_topic: 'plugwise2py/state/power/000D6F00039791E0'
   unit_of_measurement: 'W'
   value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
-  sensor_class: power
   
 - platform: mqtt
   name: upstairs_bedroom_charger_kevin
   state_topic: 'plugwise2py/state/power/000D6F00001C7B58'
   unit_of_measurement: 'W'
   value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
-  sensor_class: power
   
 - platform: mqtt
   name: upstairs_bedroom_charger_amrita
   state_topic: 'plugwise2py/state/power/000D6F000038BF7A'
   unit_of_measurement: 'W'
   value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
-  sensor_class: power
   
 # Appliances
 - platform: template
