@@ -108,15 +108,6 @@ switch.downstairs_backyard_light:
 switch.downstairs_frontyard_light:
   friendly_name: Buitenlamp voor
   icon: mdi:lightbulb
-switch.downstairs_frontyard_christmaslights:
-  friendly_name: Kerstverlichting voor
-  icon: mdi:pine-tree
-switch.downstairs_backyard_christmaslights:
-  friendly_name: Kerstverlichting achter
-  icon: mdi:pine-tree
-switch.downstairs_living_christmastree:
-  friendly_name: Kerstboom
-  icon: mdi:pine-tree
   
 # Light
 light.upstairs_bedroom:
