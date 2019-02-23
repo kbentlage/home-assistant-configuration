@@ -10,6 +10,9 @@ homeassistant:
 
 frontend:
 
+lovelace:
+  mode: yaml
+
 http:
   api_password: !secret api_password
 
@@ -40,10 +43,10 @@ tts:
     time_memory: 300
 
 # InfluxDB
-influxdb:
-  host: 127.0.0.1
-  port: 8086
-  database: hass
+#influxdb:
+#  host: 127.0.0.1
+#  port: 8086
+#  database: hass
 
 # MQTT
 mqtt:
