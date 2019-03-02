@@ -1,20 +1,27 @@
 ---
 - name: leaving
   entities:
+    light.downstairs_dining: false
     light.downstairs_living_tv: false
     light.downstairs_living_dresser: false
+    light.downstairs_hallway: false
     switch.bedroom_lamp_tv: false
     switch.office_lamp_desk: false
     
 - name: night_mode
   entities:
+    light.downstairs_dining: false
     light.downstairs_living_tv: false
     light.downstairs_living_dresser: false
+    light.downstairs_hallway: false
     switch.bedroom_lamp_tv: false
     switch.office_lamp_desk: false
 
 - name: downstairs_living_evening
   entities:
+    light.downstairs_dining:
+      state: true
+      brightness: 255
     light.downstairs_living_tv: 
       state: true
       brightness: 255
@@ -24,6 +31,9 @@
            
 - name: downstairs_living_watchtv
   entities:
+    light.downstairs_dining:
+      state: true
+      brightness: 125
     light.downstairs_living_tv: 
       state: true
       brightness: 125
