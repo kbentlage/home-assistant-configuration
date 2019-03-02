@@ -73,18 +73,18 @@ sensor.attic_ventilation_usage:
 sensor.attic_heating_usage:
   friendly_name: CV ketel
   icon: mdi:fire
-sensor.downstairs_living_motion_temperature:
+sensor.downstairs_living_multi_temperature:
   friendly_name: Temperatuur
-sensor.downstairs_living_motion_luminance:
+sensor.downstairs_living_multi_luminance:
   friendly_name: Licht
-sensor.downstairs_living_motion_seismic_intensity:
+sensor.downstairs_living_multi_seismic_intensity:
   friendly_name: Trilling
   
 # Binary sensor
 binary_sensor.downstairs_hallway_frontdoor:
   friendly_name: Buitendeur
   device_class: door
-binary_sensor.downstairs_living_motion:
+binary_sensor.downstairs_living_multi_motion:
   friendly_name: Beweging
     
 # Wasmachine
@@ -110,6 +110,12 @@ switch.downstairs_frontyard_light:
   icon: mdi:lightbulb
   
 # Light
+light.downstairs_hallway:
+  friendly_name: Lamp
+  icon: mdi:ceiling-light
+light.downstairs_dining:
+  friendly_name: Lamp eettafel
+  icon: mdi:ceiling-light
 light.upstairs_bedroom:
   friendly_name: Lamp
   icon: mdi:ceiling-light

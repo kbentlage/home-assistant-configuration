@@ -39,10 +39,11 @@ livingroom:
   entities:
     - scene.downstairs_living_evening
     - scene.downstairs_living_watchtv
-    #- binary_sensor.downstairs_living_motion
-    #- sensor.downstairs_living_motion_temperature
-    #- sensor.downstairs_living_motion_luminance
-    # - sensor.downstairs_living_motion_seismic_intensity
+    - binary_sensor.downstairs_living_multi_motion
+    - sensor.downstairs_living_multi_temperature
+    - sensor.downstairs_living_multi_luminance
+    - sensor.downstairs_living_multi_seismic_intensity
+    - light.downstairs_dining
     - light.downstairs_living_tv
     - light.downstairs_living_dresser
     - media_player.tv_living_room
@@ -51,6 +52,7 @@ livingroom:
 hallway:
   name: Hal
   entities:
+    - light.downstairs_hallway
     - binary_sensor.downstairs_hallway_frontdoor
 
 garden:
