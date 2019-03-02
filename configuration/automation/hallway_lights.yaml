@@ -1,0 +1,17 @@
+---
+- alias: 'Hallway lights on when front door opened and sunset'
+  initial_state: on
+  trigger:
+    platform: state
+    entity_id: binary_sensor.downstairs_hallway_frontdoor
+    from: 'off'
+    to: 'on'
+  condition:
+    condition: sun
+    after: sunset
+    after_offset: "-00:45:00"
+  action:
+    - service: light.turn_on
+      data:
+        entity_id: light.downstairs_hallway
+        brightness: 255
