@@ -19,8 +19,6 @@
     platform: state
     entity_id: group.all_devices
     to: 'home'
-    for:
-      minutes: 1
   condition:
     condition: sun
     after: sunset
@@ -36,6 +34,10 @@
     entity_id: media_player.tv_living_room
     to: 'playing'
     from: 'off'
+  condition:
+    condition: sun
+    after: sunset
+    after_offset: "-00:45:00"
   action:
     service: scene.turn_on
     entity_id: scene.downstairs_living_watchtv
