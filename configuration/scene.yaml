@@ -24,7 +24,7 @@
       brightness: 255
     light.downstairs_living_tv: 
       state: true
-      brightness: 255
+      brightness: 100
     light.downstairs_living_dresser: 
       state: true
       brightness: 175
@@ -36,7 +36,7 @@
       brightness: 125
     light.downstairs_living_tv: 
       state: true
-      brightness: 75
+      brightness: 90
     light.downstairs_living_dresser: 
       state: true
       brightness: 100

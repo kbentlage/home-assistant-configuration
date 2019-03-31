@@ -7,9 +7,16 @@
     from: 'off'
     to: 'on'
   condition:
-    condition: sun
-    after: sunset
-    after_offset: "-00:45:00"
+    condition: and
+    conditions:
+      - condition: sun
+        after: sunset
+        after_offset: "-00:45:00"
+      - condition: state
+        entity_id: group.people
+        state: not_home
+        for:
+          minutes: 5
   action:
     - service: light.turn_on
       data:
