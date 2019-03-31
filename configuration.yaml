@@ -15,6 +15,9 @@ lovelace:
 
 http:
   api_password: !secret api_password
+  
+recorder:
+  db_url: !secret db_url
 
 config:
 
