@@ -41,7 +41,8 @@ system_health:
 
 # Text To Speech
 tts:
-  - platform: google
+  - platform: google_translate
+    service_name: google_say
     language: nl
     cache: true
     cache_dir: /tmp/tts
@@ -55,7 +56,7 @@ tts:
 
 # MQTT
 mqtt:
-  broker: 127.0.0.1
+  broker: !secret mqtt_host
   client_id: home-assistant
   keepalive: 60
   birth_message:
@@ -79,6 +80,14 @@ mqtt:
 # Zwave 
 zwave:
   usb_path: /dev/ttyACM0
+  
+# Google Home
+google_assistant:
+  project_id: hass-bentlage
+  api_key: !secret google_assistant_api_key
+  exposed_domains:
+    - switch
+    - light
 
 script:
   sonos_speak:
