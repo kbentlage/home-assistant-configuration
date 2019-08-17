@@ -9,37 +9,86 @@
     - pressure
     - condition
       
-# Smartmeter
+# Smartmeter readings
 - platform: mqtt
   name: power_usage
-  state_topic: ha/sensor/smartmeter/electricity/current-watt
+  state_topic: dsmr/reading/electricity_currently_delivered
   unit_of_measurement: kWh
+  value_template: '{{ value | float }}'
     
 - platform: mqtt
   name: power_usage_low
-  state_topic: ha/sensor/smartmeter/electricity/kwh-low
+  state_topic: dsmr/reading/electricity_delivered_1
   unit_of_measurement: kWh
+  value_template: '{{ value | float }}'
     
 - platform: mqtt
   name: power_usage_high
-  state_topic: ha/sensor/smartmeter/electricity/kwh-high
+  state_topic: dsmr/reading/electricity_delivered_2
   unit_of_measurement: kWh
-    
+  value_template: '{{ value | float }}'    
+
 - platform: mqtt
   name: power_generated_low
-  state_topic: ha/sensor/smartmeter/electricity/kwh-generated-low
+  state_topic: dsmr/reading/electricity_returned_1
   unit_of_measurement: kWh
-    
+  value_template: '{{ value | float }}'    
+
 - platform: mqtt
   name: power_generated_high
-  state_topic: ha/sensor/smartmeter/electricity/kwh-generated-high
+  state_topic: dsmr/reading/electricity_returned_2
   unit_of_measurement: kWh
-    
+  value_template: '{{ value | float }}'
+
 - platform: mqtt
   name: gas_usage
-  state_topic: ha/sensor/smartmeter/gas/m3
+  state_topic: dsmr/reading/extra_device_delivered
   unit_of_measurement: m3
-  
+  value_template: '{{ value | float }}'
+
+# Smartmeter day consumption
+- platform: mqtt
+  name: power_day_usage
+  state_topic: dsmr/day-consumption/electricity_merged
+  unit_of_measurement: kWh
+  value_template: '{{ value | float }}'
+
+- platform: mqtt
+  name: power_day_usage_low
+  state_topic: dsmr/day-consumption/electricity1
+  unit_of_measurement: kWh
+  value_template: '{{ value | float }}'
+
+- platform: mqtt
+  name: power_day_usage_high
+  state_topic: dsmr/day-consumption/electricity2
+  unit_of_measurement: kWh
+  value_template: '{{ value | float }}'
+
+- platform: mqtt
+  name: power_day_generated
+  state_topic: dsmr/day-consumption/electricity_returned_merged
+  unit_of_measurement: kWh
+  value_template: '{{ value | float }}'
+
+- platform: mqtt
+  name: power_day_generated_low
+  state_topic: dsmr/day-consumption/electricity1_returned
+  unit_of_measurement: kWh
+  value_template: '{{ value | float }}'
+
+- platform: mqtt
+  name: power_day_generated_high
+  state_topic: dsmr/day-consumption/electricity2_returned
+  unit_of_measurement: kWh
+  value_template: '{{ value | float }}'
+
+- platform: mqtt
+  name: gas_day_usage
+  state_topic: dsmr/day-consumption/gas
+  unit_of_measurement: m3
+  value_template: '{{ value | float }}'
+
 # Plugwise
 - platform: mqtt
   name: fusebox_server_usage

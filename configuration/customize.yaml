@@ -29,6 +29,8 @@ sensor.br_symbol:
 sensor.br_temperature:
   friendly_name: Temperatuur
   device_class: temperature
+
+# Sensor energy usage
 sensor.power_usage:
   friendly_name: Stroomverbruik
   icon: mdi:power-socket-eu
@@ -47,7 +49,28 @@ sensor.power_generated_high:
 sensor.gas_usage:
   friendly_name: Meterstand gas
   icon: mdi:fire
-  
+sensor.power_day_usage:
+  friendly_name: Stroomverbruik
+  icon: mdi:power-socket-eu
+sensor.power_day_usage_low:
+  friendly_name: Stroomverbruik (laag)
+  icon: mdi:flash
+sensor.power_day_usage_high:
+  friendly_name: Stroomverbruik (hoog)
+  icon: mdi:flash
+sensor.power_day_generated:
+  friendly_name: Stroom opgewekt
+  icon: mdi:solar-power
+sensor.power_day_generated_low:
+  friendly_name: Stroom opgewekt (laag)
+  icon: mdi:solar-power
+sensor.power_day_generated_high:
+  friendly_name: Stroom opgewekt (hoog)
+  icon: mdi:solar-power
+sensor.gas_day_usage:
+  friendly_name: Gasverbruik
+  icon: mdi:fire
+
 # Sensor usage
 sensor.fusebox_server_usage:
   friendly_name: Server

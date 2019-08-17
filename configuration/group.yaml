@@ -31,6 +31,7 @@ house:
   view: yes
   entities:
     - group.energy_usage
+    - group.energy_day_usage
     - group.device_usage
 
 # Rooms 
@@ -107,6 +108,17 @@ energy_usage:
     - sensor.power_generated_low
     - sensor.power_generated_high
     - sensor.gas_usage
+
+energy_day_usage:
+  name: Dag verbruik
+  entities:
+    - sensor.power_day_usage
+    - sensor.power_day_usage_low
+    - sensor.power_day_usage_high
+    - sensor.power_day_generated
+    - sensor.power_day_generated_low
+    - sensor.power_day_generated_high
+    - sensor.gas_day_usage
     
 device_usage:
   name: Verbruik apparaten
