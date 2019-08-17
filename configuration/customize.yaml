@@ -40,6 +40,9 @@ sensor.power_usage_low:
 sensor.power_usage_high:
   friendly_name: Meterstand stroom verbruik (hoog)
   icon: mdi:flash
+sensor.power_generated:
+  friendly_name: Stroom opgewekt
+  icon: mdi:solar-power
 sensor.power_generated_low:
   friendly_name: Meterstand stroom opgewekt (laag)
   icon: mdi:solar-power
@@ -70,6 +73,15 @@ sensor.power_day_generated_high:
 sensor.gas_day_usage:
   friendly_name: Gasverbruik
   icon: mdi:fire
+sensor.power_day_usage_cost:
+  friendly_name: Stroom kosten
+  icon: mdi:currency-eur
+sensor.gas_day_usage_cost:
+  friendly_name: Gas kosten
+  icon: mdi:currency-eur
+sensor.energy_day_usage_cost:
+  friendly_name: Energiekosten (totaal)
+  icon: mdi:currency-eur
 
 # Sensor usage
 sensor.fusebox_server_usage:

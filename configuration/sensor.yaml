@@ -29,6 +29,12 @@
   value_template: '{{ value | float }}'    
 
 - platform: mqtt
+  name: power_generated
+  state_topic: dsmr/reading/electricity_currently_returned
+  unit_of_measurement: kWh
+  value_template: '{{ value | float }}'
+
+- platform: mqtt
   name: power_generated_low
   state_topic: dsmr/reading/electricity_returned_1
   unit_of_measurement: kWh
@@ -66,6 +72,24 @@
   value_template: '{{ value | float }}'
 
 - platform: mqtt
+  name: power_day_usage_cost
+  state_topic: dsmr/day-consumption/electricity_cost_merged
+  unit_of_measurement: EUR
+  value_template: '{{ value | float }}'
+
+- platform: mqtt
+  name: power_day_usage_low_cost
+  state_topic: dsmr/day-consumption/electricity1_cost
+  unit_of_measurement: EUR
+  value_template: '{{ value | float }}'
+
+- platform: mqtt
+  name: power_day_usage_high_cost
+  state_topic: dsmr/day-consumption/electricity2_cost
+  unit_of_measurement: EUR
+  value_template: '{{ value | float }}'
+
+- platform: mqtt
   name: power_day_generated
   state_topic: dsmr/day-consumption/electricity_returned_merged
   unit_of_measurement: kWh
@@ -87,6 +111,18 @@
   name: gas_day_usage
   state_topic: dsmr/day-consumption/gas
   unit_of_measurement: m3
+  value_template: '{{ value | float }}'
+
+- platform: mqtt
+  name: gas_day_usage_cost
+  state_topic: dsmr/day-consumption/gas_cost
+  unit_of_measurement: EUR
+  value_template: '{{ value | float }}'
+
+- platform: mqtt
+  name: energy_day_usage_cost
+  state_topic: dsmr/day-consumption/total_cost
+  unit_of_measurement: EUR
   value_template: '{{ value | float }}'
 
 # Plugwise
