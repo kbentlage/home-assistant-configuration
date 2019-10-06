@@ -87,6 +87,9 @@ sensor.energy_day_usage_cost:
 sensor.fusebox_server_usage:
   friendly_name: Server
   icon: mdi:server
+sensor.livingroom_tv_usage:
+  friendly_name: TV Hoek
+  icon: mdi:television
 sensor.bedroom_lamp_tv_usage:
   friendly_name: Lamp TV
   icon: mdi:floor-lamp

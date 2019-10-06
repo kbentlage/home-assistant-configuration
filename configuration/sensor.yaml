@@ -131,6 +131,12 @@
   state_topic: 'plugwise2py/state/power/000D6F0001A44529'
   unit_of_measurement: 'W'
   value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
+
+- platform: mqtt
+  name: livingroom_tv_usage
+  state_topic: 'plugwise2py/state/power/000D6F000397470B'
+  unit_of_measurement: 'W'
+  value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
   
 - platform: mqtt
   name: kitchen_dishwasher_usage

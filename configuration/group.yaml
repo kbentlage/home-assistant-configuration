@@ -128,6 +128,7 @@ device_usage:
   name: Verbruik apparaten
   entities:
     - sensor.fusebox_server_usage
+    - sensor.livingroom_tv_usage
     - sensor.kitchen_dishwasher_usage
     - sensor.attic_freezer_usage
     - sensor.attic_washingmachine_usage
