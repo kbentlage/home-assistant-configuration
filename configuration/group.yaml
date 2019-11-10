@@ -130,6 +130,7 @@ device_usage:
     - sensor.fusebox_server_usage
     - sensor.livingroom_tv_usage
     - sensor.kitchen_dishwasher_usage
+    - sensor.office_gear_usage
     - sensor.attic_freezer_usage
     - sensor.attic_washingmachine_usage
     - sensor.attic_ventilation_usage
@@ -138,9 +139,8 @@ device_usage:
 people:
   name: Personen
   entities:
-    - device_tracker.iphonekevin_app
-    - device_tracker.iphoneamrita_app
-    #- device_tracker.318i
+    - device_tracker.iphonevankevin
+    - device_tracker.iphonevanamrita
 
 scripts:
   name: Scripts

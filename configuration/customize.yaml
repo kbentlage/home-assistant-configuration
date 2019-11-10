@@ -93,6 +93,9 @@ sensor.livingroom_tv_usage:
 sensor.bedroom_lamp_tv_usage:
   friendly_name: Lamp TV
   icon: mdi:floor-lamp
+sensor.office_gear_usage:
+  friendly_name: Kantoor gear
+  icon: mdi:laptop-mac
 sensor.office_lamp_desk_usage:
   friendly_name: Lamp bureau
   icon: mdi:desk-lamp
