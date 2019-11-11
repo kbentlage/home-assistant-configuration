@@ -16,9 +16,13 @@
 - alias: 'Living room lights coming home and sunset'
   initial_state: on
   trigger:
-    platform: state
-    entity_id: group.people
-    to: 'home'
+    - platform: state
+      entity_id: group.people
+      to: 'home'
+    - platform: state
+      entity_id: binary_sensor.downstairs_hallway_frontdoor
+      from: 'off'
+      to: 'on'
   condition:
     condition: sun
     after: sunset
