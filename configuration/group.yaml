@@ -17,6 +17,7 @@ downstairs:
     - group.livingroom
     - group.hallway
     - group.garden
+    - group.christmas_lights
     
 upstairs:
   name: Boven
@@ -61,6 +62,12 @@ garden:
   entities:
     - switch.downstairs_frontyard_light
     - switch.downstairs_backyard_light
+    
+christmas_lights:
+  name: Kerstverlichting
+  entities:
+    - switch.downstairs_living_christmastree
+    - switch.downstairs_frontyard_christmas_lights
     
 bedroom:
   name: Slaapkamer
@@ -128,13 +135,13 @@ device_usage:
   name: Verbruik apparaten
   entities:
     - sensor.fusebox_server_usage
-    - sensor.livingroom_tv_usage
     - sensor.kitchen_dishwasher_usage
-    - sensor.office_gear_usage
     - sensor.attic_freezer_usage
     - sensor.attic_washingmachine_usage
     - sensor.attic_ventilation_usage
     - sensor.attic_heating_usage
+    - sensor.downstairs_living_christmastree_usage
+    - sensor.downstairs_frontyard_christmas_lights_usage
     
 people:
   name: Personen

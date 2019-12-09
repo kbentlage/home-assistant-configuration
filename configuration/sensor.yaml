@@ -131,22 +131,10 @@
   state_topic: 'plugwise2py/state/power/000D6F0001A44529'
   unit_of_measurement: 'W'
   value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
-
-- platform: mqtt
-  name: livingroom_tv_usage
-  state_topic: 'plugwise2py/state/power/000D6F000397470B'
-  unit_of_measurement: 'W'
-  value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
   
 - platform: mqtt
   name: kitchen_dishwasher_usage
   state_topic: 'plugwise2py/state/power/000D6F000397AAAE'
-  unit_of_measurement: 'W'
-  value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
- 
-- platform: mqtt
-  name: office_gear_usage
-  state_topic: 'plugwise2py/state/power/000D6F00039791BC'
   unit_of_measurement: 'W'
   value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
  
@@ -183,6 +171,18 @@
 - platform: mqtt
   name: upstairs_bedroom_charger_amrita
   state_topic: 'plugwise2py/state/power/000D6F000038BF7A'
+  unit_of_measurement: 'W'
+  value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
+  
+- platform: mqtt
+  name: downstairs_living_christmastree_usage
+  state_topic: 'plugwise2py/state/power/000D6F000397470B'
+  unit_of_measurement: 'W'
+  value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
+  
+- platform: mqtt
+  name: downstairs_frontyard_christmas_lights_usage
+  state_topic: 'plugwise2py/state/power/000D6F00039791BC'
   unit_of_measurement: 'W'
   value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
   

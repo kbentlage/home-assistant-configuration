@@ -1,0 +1,101 @@
+---
+# Christmas tree lights
+- alias: 'Christmas tree on when night mode disabled'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.night_mode
+      to: 'off'
+  condition:
+    - condition: state
+      entity_id: group.people
+      state: 'home'
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id:
+          - switch.downstairs_living_christmastree
+          
+- alias: 'Christmas tree off when leaving'
+  trigger:
+    - platform: state
+      entity_id: group.people
+      to: 'not_home'
+      for:
+        minutes: 5
+  action:
+    - service: switch.turn_off
+      data:
+        entity_id:
+          - switch.downstairs_living_christmastree
+      
+- alias: 'Christmas tree on when coming home'
+  trigger:
+    - platform: state
+      entity_id: group.people
+      to: 'home'
+    - platform: state
+      entity_id: binary_sensor.downstairs_hallway_frontdoor
+      from: 'off'
+      to: 'on'
+  condition:
+    - condition: state
+      entity_id: input_boolean.night_mode
+      state: 'off'
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id:
+          - switch.downstairs_living_christmastree
+    
+- alias: 'Christmas tree off when night mode enabled'
+  trigger:
+    - platform: state
+      entity_id: input_boolean.night_mode
+      to: 'on'
+  action:
+    - service: switch.turn_off
+      data:
+        entity_id:
+          - switch.downstairs_living_christmastree
+      
+# Outside lights
+- alias: 'Christmas lights on when sunset'
+  trigger:
+    - platform: sun
+      event: sunset
+      offset: '+00:15:00'
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id:
+          - switch.downstairs_frontyard_christmas_lights
+          
+- alias: 'Christmas lights off at night'
+  trigger:
+    - platform: time
+      at: '02:00'
+  action:
+    - service: switch.turn_off
+      data:
+        entity_id:
+          - switch.downstairs_frontyard_christmas_lights
+          
+- alias: 'Christmas lights on at morning'
+  trigger:
+    - platform: time
+      at: '06:00'
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id: 
+          - switch.downstairs_frontyard_christmas_lights
+      
+- alias: 'Christmas lights off when sunrise'
+  trigger:
+    - platform: sun
+      event: sunrise
+  action:
+    - service: switch.turn_off
+      data:
+        entity_id: 
+          - switch.downstairs_frontyard_christmas_lights

@@ -9,7 +9,7 @@
     condition: and
     conditions:
       - condition: state
-        entity_id: device_tracker.iphonekevin_app
+        entity_id: group.people
         state: home
       - condition: time
         after: '20:00:00'
