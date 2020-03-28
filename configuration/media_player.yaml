@@ -1,20 +1,7 @@
 ---
-#- platform: heos
-#  host: !secret heos_host 
-#  name: 'HEOS'
-
 - platform: kodi
   name: Kodi
   host: !secret kodi_host
   port: !secret kodi_port
   username: !secret kodi_username
   password: !secret kodi_password
-
-- platform: webostv
-  host: !secret tv_host
-  name: 'TV Living Room'
-  timeout: 5
-  turn_on_action:
-    service: wake_on_lan.send_magic_packet
-    data:
-      mac: '04-4E-AF-32-52-84'

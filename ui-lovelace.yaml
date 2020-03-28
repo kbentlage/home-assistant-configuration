@@ -1,0 +1,145 @@
+title: Thuis
+views:
+
+### DASHBOARD ###
+  - title: Dashboard
+    path: dashboard
+    icon: mdi:home
+    cards:
+    
+      - title: Scenes
+        type: entities
+        show_header_toggle: false
+        entities:
+          - scene.leaving
+          
+      - title: Instellingen
+        type: entities
+        show_header_toggle: false
+        entities:
+          - input_boolean.night_mode
+          
+      - title: Weer
+        type: entities
+        show_header_toggle: false
+        entities:
+          - sensor.br_temperature
+          - sensor.br_symbol
+          - sun.sun
+          
+      - title: Personen
+        type: entities
+        show_header_toggle: false
+        entities:
+          - device_tracker.iphonevankevin
+          - device_tracker.iphonevanamrita
+          
+### DOWNSTAIRS ###
+  - title: Beneden
+    path: downstairs
+    cards:
+    
+      - title: Woonkamer
+        type: entities
+        show_header_toggle: true
+        entities:
+          - scene.downstairs_living_evening
+          - scene.downstairs_living_watchtv
+          - binary_sensor.downstairs_living_multi_motion
+          - sensor.downstairs_living_multi_temperature
+          - sensor.downstairs_living_multi_luminance
+          - sensor.downstairs_living_multi_seismic_intensity
+          - light.downstairs_dining
+          - light.downstairs_living_tv
+          - light.downstairs_living_dresser
+          #- media_player.tv_living_room
+          
+      - title: Hal
+        type: entities
+        show_header_toggle: true
+        entities:
+          - light.downstairs_hallway
+          - binary_sensor.downstairs_hallway_frontdoor
+          
+      - title: Tuin
+        type: entities
+        show_header_toggle: true
+        entities:
+          - switch.downstairs_frontyard_light
+          - switch.downstairs_backyard_light
+          
+### UPSTAIRS ###
+  - title: Boven
+    path: upstairs
+    cards:
+    
+      - title: Slaapkamer
+        type: entities
+        show_header_toggle: true
+        entities:
+          - scene.upstairs_bedroom_watchtv
+          - scene.upstairs_bedroom_romantic
+          - light.upstairs_bedroom
+          - switch.bedroom_lamp_tv
+          
+      - title: Kantoor
+        type: entities
+        show_header_toggle: true
+        entities:
+          - switch.office_lamp_desk
+          - media_player.kantoor
+          
+### ATTIC ###
+  - title: Zolder
+    path: attic
+    cards:
+    
+      - title: Washok
+        type: entities
+        show_header_toggle: false
+        entities:
+          - sensor.washing_machine_status
+          - sensor.ventilation_status
+          
+### HOUSE ###
+  - title: Huis
+    path: house
+    cards:
+    
+      - title: Verbruik
+        type: entities
+        show_header_toggle: false
+        entities:
+          - sensor.power_usage
+          - sensor.power_usage_low
+          - sensor.power_usage_high
+          - sensor.power_generated
+          - sensor.power_generated_low
+          - sensor.power_generated_high
+          - sensor.gas_usage
+          
+      - title: Dag verbruik
+        type: entities
+        show_header_toggle: false
+        entities:
+          - sensor.power_day_usage
+          - sensor.power_day_usage_low
+          - sensor.power_day_usage_high
+          - sensor.power_day_generated
+          - sensor.power_day_generated_low
+          - sensor.power_day_generated_high
+          - sensor.gas_day_usage
+          - sensor.power_day_usage_cost
+          - sensor.gas_day_usage_cost
+          - sensor.energy_day_usage_cost
+          
+      - title: Verbruik apparaten
+        type: entities
+        show_header_toggle: false
+        entities:
+          - sensor.fusebox_server_usage
+          - sensor.kitchen_dishwasher_usage
+          - sensor.attic_freezer_usage
+          - sensor.attic_washingmachine_usage
+          - sensor.attic_ventilation_usage
+          - sensor.attic_heating_usage

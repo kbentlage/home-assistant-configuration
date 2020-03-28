@@ -114,12 +114,6 @@ sensor.downstairs_living_multi_luminance:
   friendly_name: Licht
 sensor.downstairs_living_multi_seismic_intensity:
   friendly_name: Trilling
-sensor.downstairs_living_christmastree_usage:
-  friendly_name: Kerstboom
-  icon: mdi:pine-tree
-sensor.downstairs_frontyard_christmas_lights_usage:
-  friendly_name: Kerstverlichting voor
-  icon: mdi:pine-tree
   
 # Binary sensor
 binary_sensor.downstairs_hallway_frontdoor:
@@ -149,13 +143,6 @@ switch.downstairs_backyard_light:
 switch.downstairs_frontyard_light:
   friendly_name: Buitenlamp voor
   icon: mdi:lightbulb
-switch.downstairs_living_christmastree:
-  friendly_name: Kerstboom
-  icon: mdi:pine-tree
-switch.downstairs_frontyard_christmas_lights:
-  friendly_name: Kerstverlichting voor
-  icon: mdi:pine-tree
-  
   
 # Light
 light.downstairs_hallway:
