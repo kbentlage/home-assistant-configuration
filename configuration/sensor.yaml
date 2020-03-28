@@ -174,18 +174,6 @@
   unit_of_measurement: 'W'
   value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
   
-- platform: mqtt
-  name: downstairs_living_christmastree_usage
-  state_topic: 'plugwise2py/state/power/000D6F000397470B'
-  unit_of_measurement: 'W'
-  value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
-  
-- platform: mqtt
-  name: downstairs_frontyard_christmas_lights_usage
-  state_topic: 'plugwise2py/state/power/000D6F00039791BC'
-  unit_of_measurement: 'W'
-  value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
-  
 # Appliances
 - platform: template
   sensors:

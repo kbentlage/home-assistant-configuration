@@ -18,23 +18,3 @@
   payload_on: '{"mac": "000D6F00004ED25A", "cmd": "switch", "val": "on"}'
   payload_off: '{"mac": "000D6F00004ED25A", "cmd": "switch", "val": "off"}'
   retain: True
-  
-- platform: mqtt
-  name: downstairs_living_christmastree
-  optimistic: False
-  command_topic: 'plugwise2py/cmd/switch/000D6F000397470B'
-  state_topic: 'plugwise2py/state/circle/000D6F000397470B'
-  value_template: '{"mac": "000D6F000397470B", "cmd": "switch", "val": "{{ value_json.switch }}"}'
-  payload_on: '{"mac": "000D6F000397470B", "cmd": "switch", "val": "on"}'
-  payload_off: '{"mac": "000D6F000397470B", "cmd": "switch", "val": "off"}'
-  retain: True
-
-- platform: mqtt
-  name: downstairs_frontyard_christmas_lights
-  optimistic: False
-  command_topic: 'plugwise2py/cmd/switch/000D6F00039791BC'
-  state_topic: 'plugwise2py/state/circle/000D6F00039791BC'
-  value_template: '{"mac": "000D6F00039791BC", "cmd": "switch", "val": "{{ value_json.switch }}"}'
-  payload_on: '{"mac": "000D6F00039791BC", "cmd": "switch", "val": "on"}'
-  payload_off: '{"mac": "000D6F00039791BC", "cmd": "switch", "val": "off"}'
-  retain: True
