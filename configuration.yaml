@@ -67,6 +67,19 @@ bmw_connected_drive:
     username: !secret bmw_username
     password: !secret bmw_password
     region: rest_of_world
+    
+# WebOS TV
+webostv:
+  host: !secret tv_host
+  name: 'TV Living Room'
+  turn_on_action:
+    service: wake_on_lan.send_magic_packet
+    data:
+      mac: '04-4E-AF-32-52-84'
+      
+# HEOS
+heos:
+  host: !secret heos_host
 
 # Zwave 
 zwave:
