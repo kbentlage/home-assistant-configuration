@@ -52,6 +52,9 @@ sensor.power_generated_high:
 sensor.gas_usage:
   friendly_name: Meterstand gas
   icon: mdi:fire
+sensor.water_usage:
+  friendly_name: Meterstand water
+  icon: mdi:water
 sensor.power_day_usage:
   friendly_name: Stroomverbruik
   icon: mdi:power-socket-eu
@@ -73,6 +76,9 @@ sensor.power_day_generated_high:
 sensor.gas_day_usage:
   friendly_name: Gasverbruik
   icon: mdi:fire
+sensor.water_day_usage:
+  friendly_name: Waterverbruik
+  icon: mdi:water
 sensor.power_day_usage_cost:
   friendly_name: Stroom kosten
   icon: mdi:currency-eur
@@ -81,6 +87,9 @@ sensor.gas_day_usage_cost:
   icon: mdi:currency-eur
 sensor.energy_day_usage_cost:
   friendly_name: Energiekosten (totaal)
+  icon: mdi:currency-eur
+sensor.water_day_usage_cost:
+  friendly_name: Water kosten
   icon: mdi:currency-eur
 
 # Sensor usage

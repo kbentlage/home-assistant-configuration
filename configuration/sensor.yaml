@@ -124,6 +124,13 @@
   state_topic: dsmr/day-consumption/total_cost
   unit_of_measurement: EUR
   value_template: '{{ value | float }}'
+  
+# Watermeter
+- platform: mqtt
+  name: water_usage
+  state_topic: watermeter/reading
+  unit_of_measurement: m3
+  value_template: '{{ value | float }}'
 
 # Plugwise
 - platform: mqtt
