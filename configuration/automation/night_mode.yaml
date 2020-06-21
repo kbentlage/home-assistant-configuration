@@ -27,6 +27,10 @@
   action:
     - service: scene.turn_on
       entity_id: scene.night_mode
+    - service: notify.ios_iphonekevin_app
+      data:
+        title: 'Nachtmodus'
+        message: 'Nachtmodus is ingeschakeld'
 
 - alias: 'Deactivate night mode on workday'
   initial_state: on

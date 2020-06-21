@@ -90,5 +90,8 @@
   action:
     - service: notify.ios_iphonekevin_app
       data:
-        title: 'Wasmachine is klaar'
+        title: 'Wasmachine'
+        message: 'Wasmachine is klaar'
+    - service: notify.tv_living_room
+      data:
         message: 'Wasmachine is klaar'

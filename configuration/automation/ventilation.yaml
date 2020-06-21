@@ -147,3 +147,17 @@
       data:
         entity_id: input_select.ventilation_status
         option: 'Stand 4'
+        
+- alias: 'Send alert when high ventilation mode is enabled for long period of time'
+  initial_state: on
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.attic_ventilation_usage
+      above: 3.5
+      for: 
+        hours: 3
+  action:
+    - service: notify.ios_iphonekevin_app
+      data:
+        title: 'Ventilatie'
+        message: "Ventilatie staat al voor een lange tijd op {{ states('input_select.ventilation_status') }}"

@@ -130,6 +130,7 @@ views:
           - sensor.power_generated_low
           - sensor.power_generated_high
           - sensor.gas_usage
+          - sensor.water_usage
           
       - title: Dag verbruik
         type: entities
@@ -142,6 +143,7 @@ views:
           - sensor.power_day_generated_low
           - sensor.power_day_generated_high
           - sensor.gas_day_usage
+          - sensor.water_day_usage
           - sensor.power_day_usage_cost
           - sensor.gas_day_usage_cost
           - sensor.energy_day_usage_cost

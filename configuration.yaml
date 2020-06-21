@@ -75,7 +75,7 @@ webostv:
   turn_on_action:
     service: wake_on_lan.send_magic_packet
     data:
-      mac: '04-4E-AF-32-52-84'
+      mac: '78-5D-C8-65-ED-2C'
       
 # HEOS
 heos:
@@ -96,3 +96,4 @@ input_select: !include configuration/input_select.yaml
 notify: !include configuration/notify.yaml
 sonos: !include configuration/sonos.yaml
 media_player: !include configuration/media_player.yaml
+utility_meter: !include configuration/utility_meter.yaml
