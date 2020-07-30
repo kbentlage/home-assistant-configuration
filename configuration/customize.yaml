@@ -41,13 +41,13 @@ sensor.power_usage_high:
   friendly_name: Meterstand stroom verbruik (hoog)
   icon: mdi:flash
 sensor.power_generated:
-  friendly_name: Stroom opgewekt
+  friendly_name: Stroom teruggeleverd
   icon: mdi:solar-power
 sensor.power_generated_low:
-  friendly_name: Meterstand stroom opgewekt (laag)
+  friendly_name: Meterstand stroom teruggeleverd (laag)
   icon: mdi:solar-power
 sensor.power_generated_high:
-  friendly_name: Meterstand stroom opgewekt (high)
+  friendly_name: Meterstand stroom teruggeleverd (high)
   icon: mdi:solar-power
 sensor.gas_usage:
   friendly_name: Meterstand gas
@@ -65,13 +65,13 @@ sensor.power_day_usage_high:
   friendly_name: Stroomverbruik (hoog)
   icon: mdi:flash
 sensor.power_day_generated:
-  friendly_name: Stroom opgewekt
+  friendly_name: Stroom teruggeleverd
   icon: mdi:solar-power
 sensor.power_day_generated_low:
-  friendly_name: Stroom opgewekt (laag)
+  friendly_name: Stroom teruggeleverd (laag)
   icon: mdi:solar-power
 sensor.power_day_generated_high:
-  friendly_name: Stroom opgewekt (hoog)
+  friendly_name: Stroom teruggeleverd (hoog)
   icon: mdi:solar-power
 sensor.gas_day_usage:
   friendly_name: Gasverbruik
