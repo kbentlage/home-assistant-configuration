@@ -6,19 +6,19 @@ views:
     path: dashboard
     icon: mdi:home
     cards:
-    
+
       - title: Scenes
         type: entities
         show_header_toggle: false
         entities:
           - scene.leaving
-          
+
       - title: Instellingen
         type: entities
         show_header_toggle: false
         entities:
           - input_boolean.night_mode
-          
+
       - title: Weer
         type: entities
         show_header_toggle: false
@@ -26,19 +26,19 @@ views:
           - sensor.br_temperature
           - sensor.br_symbol
           - sun.sun
-          
+
       - title: Personen
         type: entities
         show_header_toggle: false
         entities:
           - device_tracker.iphonevankevin
           - device_tracker.iphonevanamrita
-          
+
 ### DOWNSTAIRS ###
   - title: Beneden
     path: downstairs
     cards:
-    
+
       - title: Woonkamer
         type: entities
         show_header_toggle: true
@@ -54,34 +54,42 @@ views:
           - light.downstairs_living_dresser
           - media_player.tv_living_room
           - media_player.heos_bar
-          
+
       - title: Hal
         type: entities
         show_header_toggle: true
         entities:
           - light.downstairs_hallway
           - binary_sensor.downstairs_hallway_frontdoor
-          
+
       - title: Tuin
         type: entities
         show_header_toggle: true
         entities:
           - switch.downstairs_frontyard_light
           - switch.downstairs_backyard_light
-          
+
+      - title: Kerstverlichting
+        type: entities
+        show_header_toggle: True
+        entities:
+          - switch.downstairs_living_christmastree
+          - switch.downstairs_frontyard_christmas_lights
+          - switch.downstairs_backyard_christmas_lights
+
       - title: HEOS
         type: media-control
         entity: media_player.heos_bar
-        
+
       - title: TV
         type: media-control
         entity: media_player.tv_living_room
-          
+
 ### UPSTAIRS ###
   - title: Boven
     path: upstairs
     cards:
-    
+
       - title: Slaapkamer
         type: entities
         show_header_toggle: true
@@ -90,35 +98,35 @@ views:
           - scene.upstairs_bedroom_romantic
           - light.upstairs_bedroom
           - switch.bedroom_lamp_tv
-          
+
       - title: Kantoor
         type: entities
         show_header_toggle: true
         entities:
           - switch.office_lamp_desk
           - media_player.kantoor
-          
+
       - title: SONOS
         type: media-control
         entity: media_player.kantoor
-          
+
 ### ATTIC ###
   - title: Zolder
     path: attic
     cards:
-    
+
       - title: Washok
         type: entities
         show_header_toggle: false
         entities:
           - sensor.washing_machine_status
           - sensor.ventilation_status
-          
+
 ### HOUSE ###
   - title: Huis
     path: house
     cards:
-    
+
       - title: Verbruik
         type: entities
         show_header_toggle: false
@@ -131,7 +139,7 @@ views:
           - sensor.power_generated_high
           - sensor.gas_usage
           - sensor.water_usage
-          
+
       - title: Dag verbruik
         type: entities
         show_header_toggle: false
@@ -147,7 +155,7 @@ views:
           - sensor.power_day_usage_cost
           - sensor.gas_day_usage_cost
           - sensor.energy_day_usage_cost
-          
+
       - title: Verbruik apparaten
         type: entities
         show_header_toggle: false

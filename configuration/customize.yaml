@@ -22,7 +22,7 @@ scene.upstairs_bedroom_watchtv:
 scene.upstairs_bedroom_romantic:
   friendly_name: Romantisch
   icon: mdi:heart
-  
+
 # Sensor
 sensor.br_symbol:
   friendly_name: Voorspelling
@@ -123,14 +123,20 @@ sensor.downstairs_living_multi_luminance:
   friendly_name: Licht
 sensor.downstairs_living_multi_seismic_intensity:
   friendly_name: Trilling
-  
+sensor.downstairs_living_christmastree_usage:
+  friendly_name: Kerstboom
+  icon: mdi:pine-tree
+sensor.downstairs_frontyard_christmas_lights_usage:
+  friendly_name: Kerstverlichting voor
+  icon: mdi:pine-tree
+
 # Binary sensor
 binary_sensor.downstairs_hallway_frontdoor:
   friendly_name: Buitendeur
   device_class: door
 binary_sensor.downstairs_living_multi_motion:
   friendly_name: Beweging
-    
+
 # Wasmachine
 sensor.washing_machine_status:
   friendly_name: Wasmachine status
@@ -138,7 +144,7 @@ sensor.washing_machine_status:
 sensor.ventilation_status:
   friendly_name: Mechanische ventilatie status
   icon: mdi:fan
-  
+
 # Switch
 switch.bedroom_lamp_tv:
   friendly_name: Lamp TV
@@ -152,7 +158,16 @@ switch.downstairs_backyard_light:
 switch.downstairs_frontyard_light:
   friendly_name: Buitenlamp voor
   icon: mdi:lightbulb
-  
+switch.downstairs_living_christmastree:
+  friendly_name: Kerstboom
+  icon: mdi:pine-tree
+switch.downstairs_frontyard_christmas_lights:
+  friendly_name: Kerstverlichting voor
+  icon: mdi:pine-tree
+switch.downstairs_backyard_christmas_lights:
+  friendly_name: Kerstverlichting achter
+  icon: mdi:pine-tree
+
 # Light
 light.downstairs_hallway:
   friendly_name: Lamp
@@ -169,7 +184,7 @@ light.downstairs_living_tv:
 light.downstairs_living_dresser:
   friendly_name: Lamp dressoir
   icon: mdi:lamp
-  
+
 # Device Tracker
 device_tracker.iphonekevin_app:
   friendly_name: Kevin
