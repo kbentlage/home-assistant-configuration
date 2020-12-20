@@ -61,12 +61,11 @@ mqtt:
     qos: 1
     retain: true
 
-# BMW
-bmw_connected_drive:
-  bmw:
-    username: !secret bmw_username
-    password: !secret bmw_password
-    region: rest_of_world
+# Tesla
+tesla:
+  username: !secret tesla_username
+  password: !secret tesla_password
+  scan_interval: 900
     
 # WebOS TV
 webostv:
