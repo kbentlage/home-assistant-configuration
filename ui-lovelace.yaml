@@ -27,12 +27,15 @@ views:
           - sensor.br_symbol
           - sun.sun
 
+      - title: Verwarming
+        type: thermostat
+        entity: climate.downstairs
+
       - title: Personen
         type: entities
         show_header_toggle: false
         entities:
-          - device_tracker.iphonevankevin
-          - device_tracker.iphonevanamrita
+          - group.tracker_kevin
 
 ### DOWNSTAIRS ###
   - title: Beneden

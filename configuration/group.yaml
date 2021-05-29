@@ -1,6 +1,11 @@
 ---
+tracker_kevin:
+  name: Kevin
+  entities:
+    - device_tracker.phone_kevin_app
+    - device_tracker.phone_kevin_wifi
+
 people:
   name: People
   entities:
-    - device_tracker.iphonevankevin
-    - device_tracker.iphonevanamrita
+    - group.tracker_kevin
