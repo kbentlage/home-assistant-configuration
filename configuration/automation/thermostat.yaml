@@ -1,0 +1,54 @@
+---
+- alias: 'Thermostat on when home'
+  initial_state: on
+  trigger:
+    platform: state
+    entity_id: group.people
+    to: 'home'
+  action:
+    service: climate.turn_on
+    target:
+      entity_id: climate.downstairs
+
+- alias: 'Thermostat off when not home'
+  initial_state: on
+  trigger:
+    platform: state
+    entity_id: group.people
+    to: 'not_home'
+    for:
+      minutes: 15
+  action:
+    service: climate.turn_off
+    target:
+      entity_id: climate.downstairs
+
+- alias: 'Thermostat at day mode when home'
+  trigger:
+    platform: time
+    at: "07:00:00"
+  condition:
+    condition: state
+    entity_id: group.people
+    state: home
+  action:
+    - service: climate.set_temperature
+      target:
+        entity_id: climate.downstairs
+      data:
+        temperature: 21
+
+- alias: 'Thermostat at night mode when home'
+  trigger:
+    platform: time
+    at: "23:00:00"
+  condition:
+    condition: state
+    entity_id: group.people
+    state: home
+  action:
+    - service: climate.set_temperature
+      target:
+        entity_id: climate.downstairs
+      data:
+        temperature: 16

@@ -96,3 +96,4 @@ notify: !include configuration/notify.yaml
 sonos: !include configuration/sonos.yaml
 media_player: !include configuration/media_player.yaml
 utility_meter: !include configuration/utility_meter.yaml
+nest: !include configuration/nest.yaml
