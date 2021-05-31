@@ -1,0 +1,4 @@
+- platform: buienradar
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  forecast: true
