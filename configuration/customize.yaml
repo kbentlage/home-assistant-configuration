@@ -29,6 +29,12 @@ sensor.br_symbol:
 sensor.br_temperature:
   friendly_name: Temperatuur
   device_class: temperature
+sensor.br_humidity:
+  friendly_name: Vochtigheid
+sensor.br_pressure:
+  friendly_name: Luchtdruk
+sensor.br_wind_speed:
+  friendly_name: Windsnelheid
 
 # Sensor energy usage
 sensor.power_usage:

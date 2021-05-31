@@ -66,7 +66,7 @@ tesla:
   username: !secret tesla_username
   password: !secret tesla_password
   scan_interval: 900
-    
+
 # WebOS TV
 webostv:
   host: !secret tv_host
@@ -75,17 +75,17 @@ webostv:
     service: wake_on_lan.send_magic_packet
     data:
       mac: '78-5D-C8-65-ED-2C'
-      
+
 # HEOS
 heos:
   host: !secret heos_host
 
-# Zwave 
+# Zwave
 zwave:
   usb_path: /dev/ttyACM0
 
 group: !include configuration/group.yaml
-sensor: !include configuration/sensor.yaml 
+sensor: !include configuration/sensor.yaml
 switch: !include configuration/switch.yaml
 zone: !include configuration/zone.yaml
 scene: !include configuration/scene.yaml
@@ -93,7 +93,9 @@ automation: !include_dir_merge_list configuration/automation/
 input_boolean: !include configuration/input_boolean.yaml
 input_select: !include configuration/input_select.yaml
 notify: !include configuration/notify.yaml
+weather: !include configuration/weather.yaml
 sonos: !include configuration/sonos.yaml
 media_player: !include configuration/media_player.yaml
 utility_meter: !include configuration/utility_meter.yaml
 nest: !include configuration/nest.yaml
+camera: !include configuration/camera.yaml
