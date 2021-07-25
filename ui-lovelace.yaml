@@ -43,6 +43,21 @@ views:
           - group.tracker_kevin
           - group.tracker_amrita
 
+      - title: Auto
+        type: entities
+        show_header_toggle: false
+        entities:
+          - device_tracker.kevster_location_tracker
+          - lock.kevster_door_lock
+          - sensor.kevster_battery_sensor
+          - binary_sensor.kevster_charger_sensor
+          - sensor.kevster_charging_rate_sensor
+          - sensor.kevster_range_sensor
+          - sensor.kevster_temperature_sensor_inside
+          - sensor.kevster_temperature_sensor_outside
+          - sensor.kevster_mileage_sensor
+          - climate.kevster_hvac_climate_system
+
 ### DOWNSTAIRS ###
   - title: Beneden
     path: downstairs
@@ -77,6 +92,7 @@ views:
         entities:
           - switch.downstairs_frontyard_light
           - switch.downstairs_backyard_light
+          - switch.downstairs_backyard_tile_lights
 
       - title: Kerstverlichting
         type: entities

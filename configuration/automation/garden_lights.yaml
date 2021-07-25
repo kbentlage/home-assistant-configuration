@@ -8,10 +8,24 @@
   action:
     - service: switch.turn_on
       data:
-        entity_id: 
+        entity_id:
           - switch.downstairs_frontyard_light
           - switch.downstairs_backyard_light
-      
+          - switch.downstairs_backyard_tile_lights
+
+- alias: 'Garden lights off at night'
+  initial_state: on
+  trigger:
+    - platform: time
+      at: '02:00'
+  action:
+    - service: switch.turn_off
+      data:
+        entity_id:
+          - switch.downstairs_frontyard_light
+          - switch.downstairs_backyard_light
+          - switch.downstairs_backyard_tile_lights
+
 - alias: 'Garden lights off when sunrise'
   initial_state: on
   trigger:
@@ -23,3 +37,17 @@
         entity_id:
           - switch.downstairs_frontyard_light
           - switch.downstairs_backyard_light
+          - switch.downstairs_backyard_tile_lights
+
+- alias: 'Garden lights off at morning'
+  initial_state: on
+  trigger:
+    - platform: time
+      at: '06:00'
+  action:
+    - service: switch.turn_on
+      data:
+        entity_id:
+          - switch.downstairs_frontyard_light
+          - switch.downstairs_backyard_light
+          - switch.downstairs_backyard_tile_lights
