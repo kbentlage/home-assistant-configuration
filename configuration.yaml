@@ -80,10 +80,6 @@ webostv:
 heos:
   host: !secret heos_host
 
-# Zwave
-zwave:
-  usb_path: /dev/ttyACM0
-
 group: !include configuration/group.yaml
 sensor: !include configuration/sensor.yaml
 switch: !include configuration/switch.yaml
