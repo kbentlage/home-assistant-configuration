@@ -35,6 +35,21 @@ sensor.br_pressure:
   friendly_name: Luchtdruk
 sensor.br_wind_speed:
   friendly_name: Windsnelheid
+sensor.avri_wastecollector_gft:
+  friendly_name: Ophaaldag GFT
+  icon: mdi:apple
+sensor.avri_wastecollector_papier:
+  friendly_name: Ophaaldag Papier
+  icon: mdi:package-variant
+sensor.avri_wastecollector_pmd:
+  friendly_name: Ophaaldag PMD
+  icon: mdi:bottle-soda-classic-outline
+sensor.avri_wastecollector_vandaag:
+  friendly_name: Vandaag
+  icon: mdi:calendar-today
+sensor.avri_wastecollector_morgen:
+  friendly_name: Morgen
+  icon: mdi:calendar
 
 # Sensor energy usage
 sensor.power_usage:

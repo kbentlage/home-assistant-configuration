@@ -203,3 +203,24 @@
   sensors:
     ventilation_status:
       value_template: '{{ states.input_select.ventilation_status.state}}'
+
+# Afvalbeheer
+- platform: afvalbeheer
+  name: wastecollector
+  wastecollector: Avri
+  resources:
+    - gft
+    - papier
+    - pmd
+  postcode: !secret home_zipcode
+  streetnumber: !secret home_streetnumber
+  upcomingsensor: 1
+  dateformat: '%d-%m-%Y'
+  dateonly: 0
+  dateobject: 0
+  dayofweek: 1
+  nameprefix: 1
+  builtinicons: 0
+  disableicons: 1
+  dutch: 1
+  updateinterval: 1

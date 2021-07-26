@@ -58,6 +58,16 @@ views:
           - sensor.kevster_mileage_sensor
           - climate.kevster_hvac_climate_system
 
+      - title: Afval
+        type: entities
+        show_header_toggle: false
+        entities:
+          - sensor.avri_wastecollector_vandaag
+          - sensor.avri_wastecollector_morgen
+          - sensor.avri_wastecollector_gft
+          - sensor.avri_wastecollector_papier
+          - sensor.avri_wastecollector_pmd
+
 ### DOWNSTAIRS ###
   - title: Beneden
     path: downstairs

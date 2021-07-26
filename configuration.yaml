@@ -8,6 +8,10 @@ homeassistant:
   time_zone: Europe/Amsterdam
   customize: !include configuration/customize.yaml
 
+http:
+  use_x_forwarded_for: true
+  trusted_proxies: 10.13.255.1
+
 frontend:
 
 lovelace:
