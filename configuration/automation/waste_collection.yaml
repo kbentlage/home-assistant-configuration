@@ -14,7 +14,3 @@
       data:
         title: "Afval"
         message: '{{ states.sensor.avri_wastecollector_morgen.state }} afval wordt morgen opgehaald!'
-        data:
-          push:
-            badge: 0
-            category: 'afval'
