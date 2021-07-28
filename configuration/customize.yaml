@@ -23,6 +23,14 @@ scene.upstairs_bedroom_romantic:
   friendly_name: Romantisch
   icon: mdi:heart
 
+# Group
+group.tracker_kevin:
+  friendly_name: Kevin
+  icon: mdi:face-man
+group.tracker_amrita:
+  friendly_name: Amrita
+  icon: mdi:face-woman
+
 # Sensor
 sensor.br_symbol:
   friendly_name: Voorspelling
