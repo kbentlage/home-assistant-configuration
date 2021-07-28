@@ -68,6 +68,19 @@ views:
           - sensor.avri_wastecollector_papier
           - sensor.avri_wastecollector_pmd
 
+      - title: Systeem
+        type: entities
+        show_header_toggle: false
+        entities:
+          - entity: binary_sensor.updater
+            name: Update beschikbaar
+          - entity: sensor.current_version
+            name: Huidige versie
+          - entity: binary_sensor.updater
+            type: attribute
+            attribute: newest_version
+            name: Nieuwste versie
+
 ### DOWNSTAIRS ###
   - title: Beneden
     path: downstairs

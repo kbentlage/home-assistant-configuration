@@ -1,4 +1,7 @@
 ---
+# Version
+- platform: version
+
 # Buienradar
 - platform: buienradar
   monitored_conditions:

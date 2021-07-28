@@ -1,0 +1,12 @@
+---
+- alias: "Update Available Notification"
+  trigger:
+    - platform: state
+      entity_id: binary_sensor.updater
+      from: "off"
+      to: "on"
+  action:
+    - service: notify.mobile_app_iphone_van_kevin
+      data:
+        title: "Update"
+        message: "Home Assistant {{ state_attr('binary_sensor.updater', 'newest_version') }} is beschikbaar."
