@@ -1,0 +1,20 @@
+---
+- alias: Waste collection notification
+  initial_state: on
+  trigger:
+    - platform: time
+      at: '20:00:00'
+  condition:
+    condition: and
+    conditions:
+      - condition: template
+        value_template: "{{ states('sensor.avri_wastecollector_morgen') != 'Geen' }}"
+  action:
+    - service: notify.mobile_app_iphone_van_kevin
+      data:
+        title: "Afval"
+        message: '{{ states.sensor.avri_wastecollector_morgen.state }} afval wordt morgen opgehaald!'
+        data:
+          push:
+            badge: 0
+            category: 'afval'
