@@ -1,56 +1,58 @@
 ---
 - name: leaving
   entities:
-    light.downstairs_dining: false
+    light.downstairs_living: false
     light.downstairs_living_tv: false
     light.downstairs_living_dresser: false
     light.downstairs_hallway: false
+    light.upstairs_corridor: false
     switch.bedroom_lamp_tv: false
     switch.office_lamp_desk: false
-    
+
 - name: night_mode
   entities:
-    light.downstairs_dining: false
+    light.downstairs_living: false
     light.downstairs_living_tv: false
     light.downstairs_living_dresser: false
     light.downstairs_hallway: false
+    light.upstairs_corridor: false
     switch.bedroom_lamp_tv: false
     switch.office_lamp_desk: false
 
 - name: downstairs_living_evening
   entities:
-    light.downstairs_dining:
-      state: true
-      brightness: 255
-    light.downstairs_living_tv: 
+    light.downstairs_living:
       state: true
       brightness: 100
-    light.downstairs_living_dresser: 
+    light.downstairs_living_tv:
+      state: true
+      brightness: 100
+    light.downstairs_living_dresser:
       state: true
       brightness: 175
-           
+
 - name: downstairs_living_watchtv
   entities:
-    light.downstairs_dining:
+    light.downstairs_living:
       state: true
-      brightness: 125
-    light.downstairs_living_tv: 
+      brightness: 51
+    light.downstairs_living_tv:
       state: true
       brightness: 90
-    light.downstairs_living_dresser: 
+    light.downstairs_living_dresser:
       state: true
       brightness: 100
 
 - name: upstairs_bedroom_watchtv
   entities:
-    light.upstairs_bedroom: 
+    light.upstairs_bedroom:
       state: false
     switch.bedroom_lamp_tv:
       state: true
-      
+
 - name: upstairs_bedroom_romantic
   entities:
-    light.upstairs_bedroom: 
+    light.upstairs_bedroom:
       state: true
       brightness: 30
     switch.bedroom_lamp_tv:

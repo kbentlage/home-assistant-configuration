@@ -95,8 +95,7 @@ views:
           - binary_sensor.downstairs_living_multi_motion
           - sensor.downstairs_living_multi_temperature
           - sensor.downstairs_living_multi_luminance
-          - sensor.downstairs_living_multi_seismic_intensity
-          - light.downstairs_dining
+          - light.downstairs_living
           - light.downstairs_living_tv
           - light.downstairs_living_dresser
           - media_player.tv_living_room
@@ -113,7 +112,9 @@ views:
         type: entities
         show_header_toggle: true
         entities:
-          - switch.downstairs_frontyard_light
+          - light.downstairs_frontyard_door
+          - light.downstairs_frontyard_garage_left
+          - light.downstairs_frontyard_garage_right
           - switch.downstairs_backyard_light
           - switch.downstairs_backyard_tile_lights
 
@@ -137,6 +138,15 @@ views:
   - title: Boven
     path: upstairs
     cards:
+
+      - title: Overloop
+        type: entities
+        show_header_toggle: True
+        entities:
+          - binary_sensor.upstairs_corridor_multi_motion
+          - sensor.upstairs_corridor_multi_temperature
+          - sensor.upstairs_corridor_multi_luminance
+          - light.upstairs_corridor
 
       - title: Slaapkamer
         type: entities

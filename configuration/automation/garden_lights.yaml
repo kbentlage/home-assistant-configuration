@@ -6,10 +6,16 @@
       event: sunset
       offset: '+00:15:00'
   action:
+    - service: light.turn_on
+      data:
+        entity_id:
+          - light.downstairs_frontyard_door
+          - light.downstairs_frontyard_garage_left
+          - light.downstairs_frontyard_garage_right
+        brightness: 255
     - service: switch.turn_on
       data:
         entity_id:
-          - switch.downstairs_frontyard_light
           - switch.downstairs_backyard_light
           - switch.downstairs_backyard_tile_lights
 
@@ -19,10 +25,34 @@
     - platform: time
       at: '02:00'
   action:
+    - service: light.turn_off
+      data:
+        entity_id:
+          - light.downstairs_frontyard_door
+          - light.downstairs_frontyard_garage_left
+          - light.downstairs_frontyard_garage_right
     - service: switch.turn_off
       data:
         entity_id:
-          - switch.downstairs_frontyard_light
+          - switch.downstairs_backyard_light
+          - switch.downstairs_backyard_tile_lights
+
+- alias: 'Garden lights on at morning'
+  initial_state: on
+  trigger:
+    - platform: time
+      at: '05:00'
+  action:
+    - service: light.turn_on
+      data:
+        entity_id:
+          - light.downstairs_frontyard_door
+          - light.downstairs_frontyard_garage_left
+          - light.downstairs_frontyard_garage_right
+        brightness: 255
+    - service: switch.turn_on
+      data:
+        entity_id:
           - switch.downstairs_backyard_light
           - switch.downstairs_backyard_tile_lights
 
@@ -33,22 +63,14 @@
       event: sunrise
       offset: '+00:15:00'
   action:
+    - service: light.turn_off
+      data:
+        entity_id:
+          - light.downstairs_frontyard_door
+          - light.downstairs_frontyard_garage_left
+          - light.downstairs_frontyard_garage_right
     - service: switch.turn_off
       data:
         entity_id:
-          - switch.downstairs_frontyard_light
-          - switch.downstairs_backyard_light
-          - switch.downstairs_backyard_tile_lights
-
-- alias: 'Garden lights off at morning'
-  initial_state: on
-  trigger:
-    - platform: time
-      at: '05:00'
-  action:
-    - service: switch.turn_on
-      data:
-        entity_id:
-          - switch.downstairs_frontyard_light
           - switch.downstairs_backyard_light
           - switch.downstairs_backyard_tile_lights

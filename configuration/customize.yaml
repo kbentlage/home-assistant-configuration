@@ -152,6 +152,12 @@ sensor.downstairs_living_multi_luminance:
   friendly_name: Licht
 sensor.downstairs_living_multi_seismic_intensity:
   friendly_name: Trilling
+sensor.upstairs_corridor_multi_temperature:
+  friendly_name: Temperatuur
+sensor.upstairs_corridor_multi_luminance:
+  friendly_name: Licht
+sensor.upstairs_corridor_multi_seismic_intensity:
+  friendly_name: Trilling
 sensor.downstairs_living_christmastree_usage:
   friendly_name: Kerstboom
   icon: mdi:pine-tree
@@ -164,6 +170,8 @@ binary_sensor.downstairs_hallway_frontdoor:
   friendly_name: Buitendeur
   device_class: door
 binary_sensor.downstairs_living_multi_motion:
+  friendly_name: Beweging
+binary_sensor.upstairs_corridor_multi_motion:
   friendly_name: Beweging
 
 # Wasmachine
@@ -182,13 +190,19 @@ switch.office_lamp_desk:
   friendly_name: Lamp bureau
   icon: mdi:desk-lamp
 switch.downstairs_backyard_light:
-  friendly_name: Buitenlamp achter
+  friendly_name: Achterdeur
   icon: mdi:lightbulb
 switch.downstairs_backyard_tile_lights:
-  friendly_name: Tegelverlichting achter
+  friendly_name: Tegelverlichting
   icon: mdi:lightbulb
-switch.downstairs_frontyard_light:
-  friendly_name: Buitenlamp voor
+light.downstairs_frontyard_door:
+  friendly_name: Voordeur
+  icon: mdi:lightbulb
+light.downstairs_frontyard_garage_left:
+  friendly_name: Garagedeur links
+  icon: mdi:lightbulb
+light.downstairs_frontyard_garage_right:
+  friendly_name: Garagedeur rechts
   icon: mdi:lightbulb
 switch.downstairs_living_christmastree:
   friendly_name: Kerstboom
@@ -204,8 +218,10 @@ switch.downstairs_backyard_christmas_lights:
 light.downstairs_hallway:
   friendly_name: Lamp
   icon: mdi:ceiling-light
-light.downstairs_dining:
-  friendly_name: Lamp eettafel
+light.downstairs_living:
+  friendly_name: Lampen
+  icon: mdi:ceiling-light
+light.upstairs_corridor:
   icon: mdi:ceiling-light
 light.upstairs_bedroom:
   friendly_name: Lamp
