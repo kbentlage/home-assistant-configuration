@@ -1,5 +1,5 @@
 ---
-- alias: 'Upstairs corridor lights on at motion and dark'
+- alias: 'Upstairs corridor lights on at motion and dark at evening'
   initial_state: on
   trigger:
     platform: state
@@ -14,12 +14,44 @@
         state: home
       - condition: numeric_state
         entity_id: sensor.upstairs_corridor_multi_luminance
-        below: 60
+        below: 50
+      - condition: or
+        conditions:
+          - condition: time
+            before: '23:59:59'
+          - condition: time
+            after: '00:00:00'
+            before: '01:00:00'
   action:
     - service: light.turn_on
       data:
         entity_id: light.upstairs_corridor
-        brightness: 255
+        brightness_pct: 100
+
+- alias: 'Upstairs corridor lights on at motion and dark at night'
+  initial_state: on
+  trigger:
+    platform: state
+    entity_id: binary_sensor.upstairs_corridor_multi_motion
+    from: 'off'
+    to: 'on'
+  condition:
+    condition: and
+    conditions:
+      - condition: state
+        entity_id: group.people
+        state: home
+      - condition: numeric_state
+        entity_id: sensor.upstairs_corridor_multi_luminance
+        below: 50
+      - condition: time
+        after: '01:00:00'
+        before: '07:00:00'
+  action:
+    - service: light.turn_on
+      data:
+        entity_id: light.upstairs_corridor
+        brightness_pct: 35
 
 - alias: 'Upstairs corridor lights off at no motion'
   initial_state: on

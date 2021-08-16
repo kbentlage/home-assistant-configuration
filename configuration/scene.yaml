@@ -23,37 +23,22 @@
   entities:
     light.downstairs_living:
       state: true
-      brightness: 100
+      brightness_pct: 20
     light.downstairs_living_tv:
       state: true
-      brightness: 100
+      brightness_pct: 25
     light.downstairs_living_dresser:
       state: true
-      brightness: 175
+      brightness_pct: 70
 
 - name: downstairs_living_watchtv
   entities:
     light.downstairs_living:
       state: true
-      brightness: 51
+      brightness_pct: 17
     light.downstairs_living_tv:
       state: true
-      brightness: 90
+      brightness_pct: 35
     light.downstairs_living_dresser:
       state: true
-      brightness: 100
-
-- name: upstairs_bedroom_watchtv
-  entities:
-    light.upstairs_bedroom:
-      state: false
-    switch.bedroom_lamp_tv:
-      state: true
-
-- name: upstairs_bedroom_romantic
-  entities:
-    light.upstairs_bedroom:
-      state: true
-      brightness: 30
-    switch.bedroom_lamp_tv:
-      state: false
+      brightness_pct: 40
