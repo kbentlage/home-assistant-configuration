@@ -65,12 +65,6 @@ mqtt:
     qos: 1
     retain: true
 
-# Tesla
-tesla:
-  username: !secret tesla_username
-  password: !secret tesla_password
-  scan_interval: 900
-
 # WebOS TV
 webostv:
   host: !secret tv_host
