@@ -14,7 +14,7 @@
         state: home
       - condition: numeric_state
         entity_id: sensor.upstairs_corridor_multi_luminance
-        below: 50
+        below: 10
       - condition: or
         conditions:
           - condition: time
@@ -43,7 +43,7 @@
         state: home
       - condition: numeric_state
         entity_id: sensor.upstairs_corridor_multi_luminance
-        below: 50
+        below: 10
       - condition: time
         after: '01:00:00'
         before: '07:00:00'
