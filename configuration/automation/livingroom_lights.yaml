@@ -36,7 +36,7 @@
   trigger:
     platform: state
     entity_id: media_player.tv_living_room
-    to: 'playing'
+    to: 'on'
     from: 'off'
   condition:
     condition: sun
@@ -52,7 +52,7 @@
     platform: state
     entity_id: media_player.tv_living_room
     to: 'off'
-    from: 'playing'
+    from: 'on'
   condition:
     condition: sun
     after: sunset
