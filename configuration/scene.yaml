@@ -2,8 +2,9 @@
 - name: leaving
   entities:
     light.downstairs_living: false
-    light.downstairs_living_tv: false
+    light.downstairs_living_couch: false
     light.downstairs_living_dresser: false
+    ight.downstairs_living_tv: false
     light.downstairs_hallway: false
     light.upstairs_corridor: false
     switch.bedroom_lamp_tv: false
@@ -12,8 +13,9 @@
 - name: night_mode
   entities:
     light.downstairs_living: false
-    light.downstairs_living_tv: false
+    light.downstairs_living_couch: false
     light.downstairs_living_dresser: false
+    light.downstairs_living_tv: false
     light.downstairs_hallway: false
     light.upstairs_corridor: false
     switch.bedroom_lamp_tv: false
@@ -24,10 +26,13 @@
     light.downstairs_living:
       state: true
       brightness_pct: 20
-    light.downstairs_living_tv:
+    light.downstairs_living_couch:
       state: true
       brightness_pct: 30
     light.downstairs_living_dresser:
+      state: true
+      brightness_pct: 70
+    light.downstairs_living_tv:
       state: true
       brightness_pct: 70
 
@@ -36,9 +41,12 @@
     light.downstairs_living:
       state: true
       brightness_pct: 17
-    light.downstairs_living_tv:
+    light.downstairs_living_couch:
       state: true
       brightness_pct: 25
     light.downstairs_living_dresser:
+      state: true
+      brightness_pct: 40
+    light.downstairs_living_tv:
       state: true
       brightness_pct: 40

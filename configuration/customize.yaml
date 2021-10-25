@@ -226,11 +226,14 @@ light.upstairs_corridor:
 light.upstairs_bedroom:
   friendly_name: Lamp
   icon: mdi:ceiling-light
-light.downstairs_living_tv:
-  friendly_name: Lamp TV
+light.downstairs_living_couch:
+  friendly_name: Lamp bank
   icon: mdi:floor-lamp
 light.downstairs_living_dresser:
   friendly_name: Lamp dressoir
+  icon: mdi:lamp
+light.downstairs_living_tv:
+  friendly_name: Lamp TV
   icon: mdi:lamp
 
 # Device Tracker
