@@ -40,12 +40,12 @@
 
 - platform: mqtt
   name: downstairs_backyard_christmas_lights
-  state_topic: "tasmota/stat/sonoff01/RESULT"
+  state_topic: "tasmota/sonoff01/stat/RESULT"
   value_template: "{{ value_json.POWER }}"
-  command_topic: "tasmota/cmnd/sonoff01/POWER"
+  command_topic: "tasmota/sonoff01/cmnd/POWER"
   payload_on: "ON"
   payload_off: "OFF"
-  availability_topic: "tasmota/tele/sonoff01/LWT"
+  availability_topic: "tasmota/sonoff01/tele/LWT"
   payload_available: "Online"
   payload_not_available: "Offline"
   qos: 1
