@@ -25,7 +25,7 @@
   entities:
     light.downstairs_living:
       state: true
-      brightness_pct: 20
+      brightness_pct: 15
     light.downstairs_living_couch:
       state: true
       brightness_pct: 30
@@ -40,7 +40,7 @@
   entities:
     light.downstairs_living:
       state: true
-      brightness_pct: 17
+      brightness_pct: 13
     light.downstairs_living_couch:
       state: true
       brightness_pct: 25
