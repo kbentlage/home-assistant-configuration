@@ -7,6 +7,9 @@ sun.sun:
 scene.leaving:
   friendly_name: Vertrekken
   icon: mdi:home-lock
+scene.coming_home:
+  friendly_name: Thuis komen
+  icon: mdi:home-lock-open
 scene.night_mode:
   friendly_name: Slaapstand
   icon: mdi:power-sleep
