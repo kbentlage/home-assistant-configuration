@@ -205,10 +205,10 @@ light.downstairs_frontyard_garage_right:
   friendly_name: Garagedeur rechts
   icon: mdi:lightbulb
 switch.downstairs_living_christmastree:
-  friendly_name: Kerstboom
+  friendly_name: Kerstboom woonkamer
   icon: mdi:pine-tree
 switch.downstairs_dining_christmastree:
-  friendly_name: Kerstboom
+  friendly_name: Kerstboom eetkamer
   icon: mdi:pine-tree
 switch.downstairs_frontyard_christmas_lights:
   friendly_name: Kerstverlichting voor
