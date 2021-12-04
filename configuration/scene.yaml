@@ -6,6 +6,8 @@
     light.downstairs_living_dresser: false
     light.downstairs_living_tv: false
     light.downstairs_hallway: false
+    light.downstairs_dining: false
+    light.downstairs_kitchen: false
     light.upstairs_corridor: false
     switch.bedroom_lamp_tv: false
     switch.office_lamp_desk: false
@@ -23,6 +25,8 @@
     light.downstairs_living_couch: false
     light.downstairs_living_dresser: false
     light.downstairs_living_tv: false
+    light.downstairs_dining: false
+    light.downstairs_kitchen: false
     light.downstairs_hallway: false
     light.upstairs_corridor: false
     switch.bedroom_lamp_tv: false
@@ -42,6 +46,12 @@
     light.downstairs_living_tv:
       state: true
       brightness_pct: 70
+    light.downstairs_dining:
+      state: true
+      brightness_pct: 15
+    light.downstairs_kitchen:
+      state: true
+      brightness_pct: 15
 
 - name: downstairs_living_watchtv
   entities:

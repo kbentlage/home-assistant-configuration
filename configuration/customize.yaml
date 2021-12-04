@@ -241,6 +241,12 @@ light.downstairs_living_dresser:
 light.downstairs_living_tv:
   friendly_name: Lamp TV
   icon: mdi:lamp
+light.downstairs_dining:
+  friendly_name: Lamp eettafel
+  icon: mdi:ceiling-light
+light.downstairs_kitchen:
+  friendly_name: Keuken
+  icon: mdi:ceiling-light
 
 # Device Tracker
 device_tracker.iphonekevin_app:
