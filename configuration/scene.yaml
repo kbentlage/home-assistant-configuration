@@ -48,7 +48,7 @@
       brightness_pct: 70
     light.downstairs_dining:
       state: true
-      brightness_pct: 20
+      brightness_pct: 18
     light.downstairs_kitchen:
       state: true
       brightness_pct: 20
