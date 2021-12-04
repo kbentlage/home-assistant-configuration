@@ -9,6 +9,16 @@
     light.upstairs_corridor: false
     switch.bedroom_lamp_tv: false
     switch.office_lamp_desk: false
+  service:
+    climate.turn_off:
+      data:
+        entity_id: climate.downstairs
+
+- name: coming_home
+  service:
+    climate.turn_on:
+      data:
+        entity_id: climate.downstairs
 
 - name: night_mode
   entities:
@@ -20,6 +30,10 @@
     light.upstairs_corridor: false
     switch.bedroom_lamp_tv: false
     switch.office_lamp_desk: false
+  service:
+    climate.turn_off:
+      data:
+        entity_id: climate.downstairs
 
 - name: downstairs_living_evening
   entities:
