@@ -144,6 +144,7 @@ views:
         show_header_toggle: True
         entities:
           - switch.downstairs_living_christmastree
+          - switch.downstairs_dining_christmastree
           - switch.downstairs_frontyard_christmas_lights
           - switch.downstairs_backyard_christmas_lights
 
