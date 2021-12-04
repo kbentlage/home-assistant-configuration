@@ -207,6 +207,9 @@ light.downstairs_frontyard_garage_right:
 switch.downstairs_living_christmastree:
   friendly_name: Kerstboom
   icon: mdi:pine-tree
+switch.downstairs_dining_christmastree:
+  friendly_name: Kerstboom
+  icon: mdi:pine-tree
 switch.downstairs_frontyard_christmas_lights:
   friendly_name: Kerstverlichting voor
   icon: mdi:pine-tree
