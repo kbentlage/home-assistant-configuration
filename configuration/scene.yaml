@@ -48,10 +48,10 @@
       brightness_pct: 70
     light.downstairs_dining:
       state: true
-      brightness_pct: 15
+      brightness_pct: 20
     light.downstairs_kitchen:
       state: true
-      brightness_pct: 15
+      brightness_pct: 20
 
 - name: downstairs_living_watchtv
   entities:
