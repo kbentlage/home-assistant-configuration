@@ -1,3 +1,4 @@
+---
 water_day_usage:
   source: sensor.water_usage
   cycle: daily
