@@ -72,6 +72,9 @@ sensor.power_usage_low:
 sensor.power_usage_high:
   friendly_name: Meterstand stroom verbruik (hoog)
   icon: mdi:flash
+sensor.power_tariff:
+  friendly_name: Stroom tarief
+  icon: mdi:currency-eur
 sensor.power_generated:
   friendly_name: Stroom teruggeleverd
   icon: mdi:solar-power

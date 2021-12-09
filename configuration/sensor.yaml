@@ -32,6 +32,11 @@
   value_template: '{{ value | float }}'
 
 - platform: mqtt
+  name: power_tariff
+  state_topic: dsmr/meter-stats/electricity_tariff
+  value_template: "{%if value == '1' %}Laag{% elif value == '2' %}Hoog{% endif %}"
+
+- platform: mqtt
   name: power_generated
   state_topic: dsmr/reading/electricity_currently_returned
   unit_of_measurement: kWh

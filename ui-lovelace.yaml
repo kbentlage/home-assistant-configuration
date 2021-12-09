@@ -218,6 +218,7 @@ views:
           - sensor.power_usage
           - sensor.power_usage_low
           - sensor.power_usage_high
+          - sensor.power_tariff
           - sensor.power_generated
           - sensor.power_generated_low
           - sensor.power_generated_high
