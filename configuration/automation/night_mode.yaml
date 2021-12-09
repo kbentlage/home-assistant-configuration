@@ -32,24 +32,6 @@
         title: 'Nachtmodus'
         message: 'Nachtmodus is ingeschakeld'
 
-- alias: 'Activate night mode on workday'
-  initial_state: on
-  trigger:
-    - platform: time
-      at: '23:59:00'
-  condition:
-    - condition: time
-      after: '23:59:00'
-      weekday:
-        - mon
-        - tue
-        - wed
-        - thu
-        - fri
-  action:
-    - service: input_boolean.turn_on
-      entity_id: input_boolean.night_mode
-
 - alias: 'Deactivate night mode on workday'
   initial_state: on
   trigger:
@@ -64,21 +46,6 @@
         - wed
         - thu
         - fri
-  action:
-    - service: input_boolean.turn_off
-      entity_id: input_boolean.night_mode
-
-- alias: 'Activate night mode in weekend'
-  initial_state: on
-  trigger:
-    - platform: time
-      at: '01:00:00'
-  condition:
-    - condition: time
-      after: '01:00:00'
-      weekday:
-        - sun
-        - mon
   action:
     - service: input_boolean.turn_off
       entity_id: input_boolean.night_mode
