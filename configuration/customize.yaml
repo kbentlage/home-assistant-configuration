@@ -158,6 +158,8 @@ sensor.upstairs_corridor_multi_luminance:
   friendly_name: Licht
 sensor.upstairs_corridor_multi_seismic_intensity:
   friendly_name: Trilling
+sensor.upstairs_corridor_multi_battery:
+  friendly_name: Batterij
 
 # Binary sensor
 binary_sensor.downstairs_hallway_frontdoor:
@@ -219,9 +221,7 @@ light.downstairs_living:
   friendly_name: Lampen
   icon: mdi:ceiling-light
 light.upstairs_corridor:
-  icon: mdi:ceiling-light
-light.upstairs_bedroom:
-  friendly_name: Lamp
+  name: Lamp
   icon: mdi:ceiling-light
 light.downstairs_living_couch:
   friendly_name: Lamp bank
