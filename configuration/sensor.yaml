@@ -34,7 +34,7 @@
 - platform: mqtt
   name: power_tariff
   state_topic: dsmr/meter-stats/electricity_tariff
-  value_template: '{{ value | string }}'
+  value_template: '{% if value | int == 1 %}Laag{% elif value | int == 2 %}Hoog{% else %}Onbekend{% endif %}'
 
 - platform: mqtt
   name: power_generated
