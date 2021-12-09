@@ -119,7 +119,6 @@ views:
           - light.downstairs_living_couch
           - light.downstairs_living_dresser
           - light.downstairs_living_tv
-          - light.downstairs_living_tv
           - media_player.tv_living_room
           - media_player.heos_bar
           - media_player.kodi
