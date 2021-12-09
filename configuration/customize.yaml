@@ -221,7 +221,7 @@ light.downstairs_living:
   friendly_name: Lampen
   icon: mdi:ceiling-light
 light.upstairs_corridor:
-  name: Lamp
+  friendly_name: Lamp
   icon: mdi:ceiling-light
 light.downstairs_living_couch:
   friendly_name: Lamp bank
