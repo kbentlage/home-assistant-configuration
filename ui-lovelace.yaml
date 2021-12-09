@@ -179,20 +179,10 @@ views:
           - sensor.upstairs_corridor_multi_battery
           - light.upstairs_corridor
 
-      - title: Slaapkamer
-        type: entities
-        show_header_toggle: true
-        entities:
-          - scene.upstairs_bedroom_watchtv
-          - scene.upstairs_bedroom_romantic
-          - light.upstairs_bedroom
-          - switch.bedroom_lamp_tv
-
       - title: Kantoor
         type: entities
         show_header_toggle: true
         entities:
-          - switch.office_lamp_desk
           - media_player.kantoor
 
       - title: SONOS
