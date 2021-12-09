@@ -128,27 +128,24 @@ sensor.water_day_usage_cost:
 sensor.fusebox_server_usage:
   friendly_name: Server
   icon: mdi:server
-sensor.bedroom_lamp_tv_usage:
-  friendly_name: Lamp TV
-  icon: mdi:floor-lamp
-sensor.office_lamp_desk_usage:
-  friendly_name: Lamp bureau
-  icon: mdi:desk-lamp
-sensor.kitchen_dishwasher_usage:
-  friendly_name: Vaatwasser
-  icon: mdi:dishwasher
-sensor.attic_freezer_usage:
+sensor.kitchen_espressomachine_usage:
+  friendly_name: Espresso machine
+  icon: mdi:coffee
+sensor.garage_freezer_usage:
   friendly_name: Vrieskast
+  icon: mdi:fridge
+sensor.garage_refrigerator_usage:
+  friendly_name: Koelkast
   icon: mdi:fridge
 sensor.attic_washingmachine_usage:
   friendly_name: Wasmachine
   icon: mdi:washing-machine
-sensor.attic_ventilation_usage:
-  friendly_name: Mechanische ventilatie
-  icon: mdi:fan
 sensor.attic_heating_usage:
   friendly_name: CV ketel
   icon: mdi:fire
+sensor.upstairs_bedroom_charger_kevin:
+  friendly_name: Lader kevin
+  icon: mdi:battery-charging
 sensor.downstairs_living_multi_temperature:
   friendly_name: Temperatuur
 sensor.downstairs_living_multi_luminance:
@@ -161,12 +158,6 @@ sensor.upstairs_corridor_multi_luminance:
   friendly_name: Licht
 sensor.upstairs_corridor_multi_seismic_intensity:
   friendly_name: Trilling
-sensor.downstairs_living_christmastree_usage:
-  friendly_name: Kerstboom
-  icon: mdi:pine-tree
-sensor.downstairs_frontyard_christmas_lights_usage:
-  friendly_name: Kerstverlichting voor
-  icon: mdi:pine-tree
 
 # Binary sensor
 binary_sensor.downstairs_hallway_frontdoor:

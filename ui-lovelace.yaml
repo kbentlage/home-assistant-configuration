@@ -250,8 +250,9 @@ views:
         show_header_toggle: false
         entities:
           - sensor.fusebox_server_usage
-          - sensor.kitchen_dishwasher_usage
-          - sensor.attic_freezer_usage
+          - sensor.kitchen_espressomachine_usage
+          - sensor.garage_freezer_usage
+          - sensor.garage_refrigerator_usage
           - sensor.attic_washingmachine_usage
-          - sensor.attic_ventilation_usage
           - sensor.attic_heating_usage
+          - sensor.upstairs_bedroom_charger_kevin
