@@ -30,7 +30,7 @@
   payload_available: "Online"
   payload_not_available: "Offline"
   qos: 1
-  retain: false
+  retain: True
 
 - platform: mqtt
   name: downstairs_frontyard_christmas_lights
