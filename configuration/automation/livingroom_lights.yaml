@@ -60,3 +60,32 @@
   action:
     service: scene.turn_on
     entity_id: scene.downstairs_living_evening
+
+- alias: 'Kitchen lights on before sunrise'
+  initial_state: on
+  trigger:
+    - platform: state
+      entity_id: input_boolean.night_mode
+      to: 'off'
+  condition:
+    - condition: state
+      entity_id: group.people
+      state: home
+    - condition: sun
+      before: sunrise
+  action:
+    service: scene.turn_on
+    entity_id: scene.downstairs_living_morning
+
+- alias: 'Kitchen lights off at sunrise'
+  initial_state: on
+  trigger:
+    platform: sun
+    event: sunrise
+  condition:
+    - condition: state
+      entity_id: group.people
+      state: home
+  action:
+    service: scene.turn_on
+    entity_id: scene.downstairs_living_morning_sunrise

@@ -32,6 +32,28 @@
     switch.bedroom_lamp_tv: false
     switch.office_lamp_desk: false
 
+- name: downstairs_living_morning
+  entities:
+    light.downstairs_dining:
+      state: true
+      brightness_pct: 18
+    light.downstairs_kitchen:
+      state: true
+      brightness_pct: 20
+
+- name: downstairs_living_morning_sunrise
+  entities:
+    light.downstairs_living: false
+    light.downstairs_living_couch: false
+    light.downstairs_living_dresser: false
+    light.downstairs_living_tv: false
+    light.downstairs_dining: false
+    light.downstairs_kitchen: false
+    light.downstairs_hallway: false
+    light.upstairs_corridor: false
+    switch.bedroom_lamp_tv: false
+    switch.office_lamp_desk: false
+
 - name: downstairs_living_evening
   entities:
     light.downstairs_living:
