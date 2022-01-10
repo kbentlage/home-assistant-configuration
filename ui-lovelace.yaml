@@ -169,6 +169,11 @@ views:
         type: media-control
         entity: media_player.kodi
 
+      - title: Voordeur
+        type: picture-glance
+        camera_image: camera.deurbel_high
+        camera_view: live
+
 ### UPSTAIRS ###
   - title: Boven
     path: upstairs
