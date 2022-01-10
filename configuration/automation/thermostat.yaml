@@ -1,8 +1,9 @@
 ---
 - alias: 'Thermostat at day mode when home'
   trigger:
-    platform: time
-    at: "07:00:00"
+    - platform: state
+      entity_id: input_boolean.night_mode
+      to: 'off'
   condition:
     condition: state
     entity_id: group.people
@@ -16,8 +17,9 @@
 
 - alias: 'Thermostat at night mode when home'
   trigger:
-    platform: time
-    at: "23:00:00"
+    - platform: state
+      entity_id: input_boolean.night_mode
+      to: 'on'
   condition:
     condition: state
     entity_id: group.people
