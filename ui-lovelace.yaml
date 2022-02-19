@@ -171,7 +171,7 @@ views:
 
       - title: Voordeur
         type: picture-glance
-        camera_image: camera.deurbel_high
+        camera_image: camera.voordeur_high
         camera_view: live
 
 ### UPSTAIRS ###
