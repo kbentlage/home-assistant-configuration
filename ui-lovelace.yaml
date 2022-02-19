@@ -171,7 +171,10 @@ views:
 
       - title: Voordeur
         type: picture-glance
-        entities: []
+        entities:
+          - binary_sensor.voordeur_doorbell
+          - binary_sensor.voordeur_motion
+          - binary_sensor.voordeur_is_dark
         camera_image: camera.voordeur_high
         camera_view: live
 
