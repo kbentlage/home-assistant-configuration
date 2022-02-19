@@ -178,6 +178,14 @@ views:
         camera_image: camera.voordeur_high
         camera_view: live
 
+      - title: Oprit
+        type: picture-glance
+        entities:
+          - binary_sensor.oprit_motion
+          - binary_sensor.oprit_is_dark
+        camera_image: camera.oprit_high
+        camera_view: live
+
 ### UPSTAIRS ###
   - title: Boven
     path: upstairs
