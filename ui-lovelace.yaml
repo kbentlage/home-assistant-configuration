@@ -24,12 +24,12 @@ views:
         type: entities
         show_header_toggle: false
         entities:
-          - weather.br_station
-          - sensor.br_temperature
-          - sensor.br_symbol
-          - sensor.br_humidity
-          - sensor.br_pressure
-          - sensor.br_wind_speed
+          - weather.buienradar
+          - sensor.buienradar_temperature
+          - sensor.buienradar_symbol
+          - sensor.buienradar_humidity
+          - sensor.buienradar_pressure
+          - sensor.buienradar_wind_speed
           - sun.sun
           - camera.buienradar
 
