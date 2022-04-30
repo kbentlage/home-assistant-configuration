@@ -73,3 +73,20 @@
     - service: climate.turn_on
       target:
         entity_id: climate.downstairs
+
+- alias: 'Thermostat at sunset and forecast is below 10 degrees'
+  initial_state: on
+  trigger:
+    - platform: sun
+      event: sunset
+  condition:
+    - condition: numeric_state
+      entity_id: sensor.buienradar_temperature_1d
+      below: 10
+    - condition: state
+      entity_id: group.people
+      state: home
+  action:
+    - service: climate.turn_on
+      target:
+        entity_id: climate.downstairs
