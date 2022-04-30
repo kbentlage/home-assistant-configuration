@@ -30,3 +30,23 @@
         entity_id: climate.downstairs
       data:
         temperature: 16
+
+- alias: 'Thermostat off when temperature forecast is above 10 degrees'
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.buienradar_temperature_1d
+      above: 9.99
+  action:
+    - service: climate.turn_off
+      target:
+        entity_id: climate.downstairs
+
+- alias: 'Thermostat on when temperature forecast is below 10 degrees'
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.buienradar_temperature_1d
+      below: 10
+  action:
+    - service: climate.turn_on
+      target:
+        entity_id: climate.downstairs
