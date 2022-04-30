@@ -12,7 +12,6 @@ views:
         show_header_toggle: false
         entities:
           - scene.leaving
-          - scene.coming_home
 
       - title: Instellingen
         type: entities
