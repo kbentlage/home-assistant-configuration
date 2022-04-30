@@ -36,6 +36,10 @@
     - platform: numeric_state
       entity_id: sensor.buienradar_temperature_1d
       above: 9.99
+  condition:
+    condition: state
+    entity_id: group.people
+    state: home
   action:
     - service: climate.turn_off
       target:
@@ -46,6 +50,10 @@
     - platform: numeric_state
       entity_id: sensor.buienradar_temperature_1d
       below: 10
+  condition:
+    condition: state
+    entity_id: group.people
+    state: home
   action:
     - service: climate.turn_on
       target:
