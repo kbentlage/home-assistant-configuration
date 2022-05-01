@@ -40,7 +40,7 @@
     - condition: state
       entity_id: group.people
       state: home
-    - platform: numeric_state
+    - condition: numeric_state
       entity_id: sensor.buienradar_temperature_1d
       above: 9.99
   action:
@@ -57,7 +57,7 @@
     - condition: state
       entity_id: group.people
       state: home
-    - platform: numeric_state
+    - condition: numeric_state
       entity_id: sensor.buienradar_temperature_1d
       below: 10
   action:
