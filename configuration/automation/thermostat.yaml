@@ -5,9 +5,9 @@
       entity_id: input_boolean.night_mode
       to: 'off'
   condition:
-    condition: state
-    entity_id: group.people
-    state: home
+    - condition: state
+      entity_id: group.people
+      state: home
   action:
     - service: climate.set_temperature
       target:
@@ -21,9 +21,9 @@
       entity_id: input_boolean.night_mode
       to: 'on'
   condition:
-    condition: state
-    entity_id: group.people
-    state: home
+    - condition: state
+      entity_id: group.people
+      state: home
   action:
     - service: climate.set_temperature
       target:
@@ -33,13 +33,16 @@
 
 - alias: 'Thermostat off when temperature forecast is above 10 degrees'
   trigger:
+    - platform: state
+      entity_id: input_boolean.night_mode
+      to: 'off'
+  condition:
+    - condition: state
+      entity_id: group.people
+      state: home
     - platform: numeric_state
       entity_id: sensor.buienradar_temperature_1d
       above: 9.99
-  condition:
-    condition: state
-    entity_id: group.people
-    state: home
   action:
     - service: climate.turn_off
       target:
@@ -47,20 +50,22 @@
 
 - alias: 'Thermostat on when temperature forecast is below 10 degrees'
   trigger:
+    - platform: state
+      entity_id: input_boolean.night_mode
+      to: 'off'
+  condition:
+    - condition: state
+      entity_id: group.people
+      state: home
     - platform: numeric_state
       entity_id: sensor.buienradar_temperature_1d
       below: 10
-  condition:
-    condition: state
-    entity_id: group.people
-    state: home
   action:
     - service: climate.turn_on
       target:
         entity_id: climate.downstairs
 
 - alias: 'Thermostat on when coming home and forecast is below 10 degrees'
-  initial_state: on
   trigger:
     - platform: state
       entity_id: group.people
