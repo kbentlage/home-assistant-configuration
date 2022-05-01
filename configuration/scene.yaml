@@ -11,8 +11,6 @@
     light.upstairs_corridor: false
     switch.bedroom_lamp_tv: false
     switch.office_lamp_desk: false
-    climate.downstairs:
-      state: 'off'
 
 - name: night_mode
   entities:
