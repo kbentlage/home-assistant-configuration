@@ -187,13 +187,12 @@
 - platform: mqtt
   name: attic_ventilation_speed
   state_topic: 'itho/ithostatus'
-  unit_of_measurement: 'W'
   value_template: "{{ value_json['Speed Status'] }}"
 
 - platform: mqtt
   name: attic_ventilation_speed_rpm
   state_topic: 'itho/ithostatus'
-  unit_of_measurement: 'W'
+  unit_of_measurement: 'rpm'
   value_template: "{{ value_json['Fan speed (rpm)'] }}"
 
 # Appliances
