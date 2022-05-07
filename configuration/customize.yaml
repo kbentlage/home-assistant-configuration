@@ -180,7 +180,7 @@ sensor.ventilation_status:
 
 switch.attic_ventilation_fan:
   friendly_name: Mechanische ventilatie
-    icon: mdi:fan
+  icon: mdi:fan
 sensor.attic_ventilation_speed:
   friendly_name: Mechanische ventilatie snelheid
   icon: mdi:fan
