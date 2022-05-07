@@ -93,3 +93,4 @@ media_player: !include configuration/media_player.yaml
 utility_meter: !include configuration/utility_meter.yaml
 nest: !include configuration/nest.yaml
 camera: !include configuration/camera.yaml
+fan: !include configuration/fan.yaml

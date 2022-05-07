@@ -41,13 +41,3 @@
   payload_on: 'on'
   payload_off: 'off'
   retain: True
-
-- platform: mqtt
-  name: attic_ventilation_fan
-  optimistic: False
-  command_topic: 'itho/cmd'
-  state_topic: 'itho/state'
-  payload_on: '220'
-  payload_off: '20'
-  availability_topic: 'itho/lwt'
-  retain: True
