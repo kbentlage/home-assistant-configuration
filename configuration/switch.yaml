@@ -47,7 +47,7 @@
   optimistic: False
   command_topic: 'itho/cmd'
   state_topic: 'itho/state'
-  payload_on: '20'
-  payload_off: '220'
+  payload_on: '220'
+  payload_off: '20'
   availability_topic: 'itho/lwt'
   retain: True
