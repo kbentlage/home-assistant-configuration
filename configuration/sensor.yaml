@@ -187,7 +187,7 @@
 - platform: mqtt
   name: attic_ventilation_speed
   state_topic: 'itho/ithostatus'
-  value_template: "{{ value_json['Speed Status'] }}"
+  value_template: "{{ value_json['Speed status'] }}"
 
 - platform: mqtt
   name: attic_ventilation_speed_rpm
