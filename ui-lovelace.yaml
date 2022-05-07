@@ -222,6 +222,14 @@ views:
           - sensor.washing_machine_status
           - sensor.ventilation_status
 
+      - title: Afzuiging
+        type: entities
+        show_header_toggle: false
+        entities:
+          - switch.attic_ventilation_fan
+          - sensor.attic_ventilation_speed
+          - sensor.attic_ventilation_speed_rpm
+
 ### HOUSE ###
   - title: Huis
     path: house
