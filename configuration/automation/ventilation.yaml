@@ -21,4 +21,4 @@
       target:
         entity_id: fan.attic_ventilation
       data:
-        percentage: 10
+        percentage: 8
