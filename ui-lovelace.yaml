@@ -192,7 +192,8 @@ views:
         type: entities
         show_header_toggle: True
         entities:
-          - binary_sensor.upstairs_corridor_multi_motion
+          - entity: binary_sensor.upstairs_corridor_multi_motion
+            secondary_info: last-changed
           - sensor.upstairs_corridor_multi_temperature
           - sensor.upstairs_corridor_multi_luminance
           - sensor.upstairs_corridor_multi_battery
@@ -217,7 +218,8 @@ views:
         type: entities
         show_header_toggle: false
         entities:
-          - sensor.washing_machine_status
+          - entity: sensor.washing_machine_status
+            secondary_info: last-changed
           - sensor.ventilation_status
 
       - title: Afzuiging
