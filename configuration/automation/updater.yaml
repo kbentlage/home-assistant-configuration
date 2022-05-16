@@ -9,4 +9,4 @@
     - service: notify.mobile_app_iphone_van_kevin
       data:
         title: "Update"
-        message: "Home Assistant {{ states.sensor.docker_hub }} is beschikbaar."
+        message: "Home Assistant {{ states('sensor.docker_hub') }} is beschikbaar."
