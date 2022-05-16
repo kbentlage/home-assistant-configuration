@@ -132,8 +132,10 @@ views:
         type: entities
         show_header_toggle: true
         entities:
-          - light.downstairs_hallway
-          - binary_sensor.downstairs_hallway_frontdoor
+          - entity: binary_sensor.voordeur_doorbell
+            name: Deurbel - Laatst aangebeld
+            secondary_info: last-changed
+
 
       - title: Tuin
         type: entities
