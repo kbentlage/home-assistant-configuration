@@ -133,9 +133,7 @@ views:
         show_header_toggle: true
         entities:
           - entity: binary_sensor.voordeur_doorbell
-            name: Deurbel - Laatst aangebeld
             secondary_info: last-changed
-
 
       - title: Tuin
         type: entities
