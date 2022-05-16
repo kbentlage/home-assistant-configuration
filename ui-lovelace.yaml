@@ -40,8 +40,10 @@ views:
         type: entities
         show_header_toggle: false
         entities:
-          - group.tracker_kevin
-          - group.tracker_amrita
+          - entity: group.tracker_kevin
+            secondary_info: last-changed
+          - entity: group.tracker_amrita
+            secondary_info: last-changed
 
       - title: Auto
         type: entities
