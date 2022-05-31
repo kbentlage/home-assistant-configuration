@@ -9,6 +9,7 @@
     light.downstairs_dining: false
     light.downstairs_kitchen: false
     light.upstairs_corridor: false
+    light.upstairs_bedroom: false
     switch.bedroom_lamp_tv: false
     switch.office_lamp_desk: false
 
