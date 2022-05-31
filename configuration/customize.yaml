@@ -230,9 +230,6 @@ light.downstairs_hallway:
 light.downstairs_living:
   friendly_name: Lampen
   icon: mdi:ceiling-light
-light.upstairs_corridor:
-  friendly_name: Lamp
-  icon: mdi:ceiling-light
 light.downstairs_living_couch:
   friendly_name: Lamp bank
   icon: mdi:floor-lamp
@@ -247,6 +244,12 @@ light.downstairs_dining:
   icon: mdi:ceiling-light
 light.downstairs_kitchen:
   friendly_name: Keuken
+  icon: mdi:ceiling-light
+light.upstairs_corridor:
+  friendly_name: Lamp
+  icon: mdi:ceiling-light
+light.upstairs_bedroom:
+  friendly_name: Lamp
   icon: mdi:ceiling-light
 
 # Device Tracker

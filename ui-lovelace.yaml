@@ -201,6 +201,12 @@ views:
           - sensor.upstairs_corridor_multi_battery
           - light.upstairs_corridor
 
+      - title: Slaapkamer
+        type: entities
+        show_header_toggle: true
+        entities:
+          - light.upstairs_bedroom
+
       - title: Kantoor
         type: entities
         show_header_toggle: true
