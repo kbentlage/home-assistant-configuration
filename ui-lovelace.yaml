@@ -213,6 +213,15 @@ views:
         entities:
           - media_player.kantoor
 
+      - title: Badkamer
+        type: entities
+        show_header_toggle: true
+        entities:
+          - binary_sensor.upstairs_bathroom_window
+          - sensor.upstairs_bathroom_temperature
+          - sensor.upstairs_bathroom_humidity
+          - sensor.upstairs_bathroom_window_battery_level
+
       - title: SONOS
         type: media-control
         entity: media_player.kantoor
