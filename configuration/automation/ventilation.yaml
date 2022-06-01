@@ -35,7 +35,7 @@
       target:
         entity_id: fan.attic_ventilation
       data:
-        percentage: 75
+        percentage: 100
 
 - alias: 'Ventilation to normal after showering'
   trigger:
