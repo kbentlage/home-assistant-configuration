@@ -22,3 +22,31 @@
         entity_id: fan.attic_ventilation
       data:
         percentage: 8
+
+- alias: 'Ventilation to high when showering'
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.upstairs_bathroom_humidity
+      above: 55
+      for:
+        minutes: 1
+  action:
+    - service: fan.set_percentage
+      target:
+        entity_id: fan.attic_ventilation
+      data:
+        percentage: 75
+
+- alias: 'Ventilation to normal after showering'
+  trigger:
+    - platform: numeric_state
+      entity_id: sensor.upstairs_bathroom_humidity
+      below: 55
+      for:
+        minutes: 1
+  action:
+    - service: fan.set_percentage
+      target:
+        entity_id: fan.attic_ventilation
+      data:
+        percentage: 20
