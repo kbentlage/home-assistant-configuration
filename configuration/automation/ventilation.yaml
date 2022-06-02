@@ -27,7 +27,7 @@
   trigger:
     - platform: numeric_state
       entity_id: sensor.upstairs_bathroom_humidity
-      above: 55
+      above: 50
       for:
         minutes: 1
   action:
@@ -41,7 +41,7 @@
   trigger:
     - platform: numeric_state
       entity_id: sensor.upstairs_bathroom_humidity
-      below: 55
+      below: 50
       for:
         minutes: 1
   action:
