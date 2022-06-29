@@ -206,12 +206,14 @@ views:
         show_header_toggle: true
         entities:
           - light.upstairs_bedroom
+          - climate.slaapkamer
 
       - title: Kantoor
         type: entities
         show_header_toggle: true
         entities:
           - media_player.kantoor
+          - climate.kantoor
 
       - title: Badkamer
         type: entities
