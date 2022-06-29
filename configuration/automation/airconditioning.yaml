@@ -1,0 +1,16 @@
+---
+- alias: 'Activate silence mode on bedroom AC when home'
+  initial_state: on
+  trigger:
+    - platform: state
+      entity_id: input_boolean.night_mode
+      to: 'on'
+  condition:
+    - condition: state
+      entity_id: group.people
+      state: home
+  action:
+    - service: climate.set_fan_mode
+      entity_id: climate.slaapkamer
+      data:
+        fan_mode: Silence
