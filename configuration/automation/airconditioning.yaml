@@ -9,6 +9,9 @@
     - condition: state
       entity_id: group.people
       state: home
+    - condition: state
+      entity_id: climate.slaapkamer
+      state: cool
   action:
     - service: climate.set_fan_mode
       entity_id: climate.slaapkamer
