@@ -33,4 +33,4 @@
     - service: climate.set_hvac_mode
       entity_id: climate.slaapkamer
       data:
-        hvac_mode: off
+        hvac_mode: 'off'
