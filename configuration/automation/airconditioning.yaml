@@ -17,6 +17,10 @@
       entity_id: climate.slaapkamer
       data:
         hvac_mode: cool
+    - service: climate.set_fan_mode
+      entity_id: climate.slaapkamer
+      data:
+        hvac_mode: 2
 
 - alias: 'Activate silence mode on bedroom AC when home and is on'
   initial_state: on
