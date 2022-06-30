@@ -1,4 +1,23 @@
 ---
+- alias: 'Turn on bedroom AC at 22:00 when it is hot and at home'
+  initial_state: on
+  trigger:
+    - platform: time
+      at: '22:00'
+  condition:
+    - condition: numeric_state
+      entity_id: climate.slaapkamer
+      attribute: current_temperature
+      above: 24
+    - condition: state
+      entity_id: group.people
+      state: home
+  action:
+    - service: climate.set_hvac_mode
+      entity_id: climate.slaapkamer
+      data:
+        hvac_mode: cool
+
 - alias: 'Activate silence mode on bedroom AC when home and is on'
   initial_state: on
   trigger:
