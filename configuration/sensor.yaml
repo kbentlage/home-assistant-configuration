@@ -189,6 +189,12 @@
   unit_of_measurement: 'W'
   value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
 
+- platform: mqtt
+  name: attic_airco_usage
+  state_topic: 'plugwise2py/state/power/000D6F000059A9F1'
+  unit_of_measurement: 'W'
+  value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
+
 # ITHO
 - platform: mqtt
   name: attic_ventilation_speed

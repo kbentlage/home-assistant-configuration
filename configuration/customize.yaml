@@ -146,6 +146,9 @@ sensor.attic_heating_usage:
 sensor.upstairs_bedroom_charger_kevin:
   friendly_name: Lader kevin
   icon: mdi:battery-charging
+sensor.attic_airco_usage:
+  friendly_name: Airco
+  icon: mdi:air-conditioner
 sensor.downstairs_living_multi_temperature:
   friendly_name: Temperatuur
 sensor.downstairs_living_multi_luminance:

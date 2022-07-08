@@ -294,4 +294,5 @@ views:
           - sensor.garage_refrigerator_usage
           - sensor.attic_washingmachine_usage
           - sensor.attic_heating_usage
+          - sensor.attic_airco_usage
           - sensor.upstairs_bedroom_charger_kevin
