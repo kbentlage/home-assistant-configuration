@@ -12,6 +12,8 @@ views:
         show_header_toggle: false
         entities:
           - scene.leaving
+          - scene.downstairs_living_evening
+          - scene.downstairs_living_watchtv
 
       - title: Instellingen
         type: entities
