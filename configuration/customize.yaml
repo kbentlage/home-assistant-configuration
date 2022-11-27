@@ -16,9 +16,6 @@ scene.downstairs_living_watchtv:
 scene.downstairs_living_evening:
   friendly_name: Avond
   icon: mdi:weather-night
-scene.downstairs_living_party:
-  friendly_name: Feest
-  icon: mdi:party-popper
 scene.upstairs_bedroom_watchtv:
   friendly_name: TV kijken
   icon: mdi:television

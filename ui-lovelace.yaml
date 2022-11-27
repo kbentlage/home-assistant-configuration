@@ -14,7 +14,6 @@ views:
           - scene.leaving
           - scene.downstairs_living_evening
           - scene.downstairs_living_watchtv
-          - scene.downstairs_living_party
 
       - title: Instellingen
         type: entities
