@@ -62,3 +62,12 @@
     light.keuken:
       state: true
       brightness_pct: 30
+
+- name: downstairs_living_party
+  entities:
+    scene.eethoek_feest:
+      state: on
+    scene.woonkamer_feest:
+      state: on
+    scene.keuken_feest:
+      state: on
