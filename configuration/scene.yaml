@@ -66,8 +66,8 @@
 - name: downstairs_living_party
   entities:
     scene.eethoek_feest:
-      state: on
+      state: true
     scene.woonkamer_feest:
-      state: on
+      state: true
     scene.keuken_feest:
-      state: on
+      state: true
