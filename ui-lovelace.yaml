@@ -117,7 +117,7 @@ views:
           - sensor.downstairs_living_multi_temperature
           - sensor.downstairs_living_multi_luminance
           - sensor.downstairs_living_multi_battery
-          - light.downstairs_living
+          - light.woonkamer
           - light.downstairs_living_couch
           - light.downstairs_living_dresser
           - light.downstairs_living_tv
@@ -129,8 +129,10 @@ views:
         type: entities
         show_header_toggle: true
         entities:
-          - light.downstairs_kitchen
-          - light.downstairs_dining
+          - light.keuken
+          - light.kookhoek
+          - light.koffiehoek
+          - light.eethoek
           - media_player.keuken
 
       - title: Hal
