@@ -23,9 +23,6 @@
     light.eethoek:
       state: true
       brightness_pct: 30
-    light.woonkamer:
-      state: true
-      brightness_pct: 30
     light.keuken:
       state: true
       brightness_pct: 30
@@ -33,7 +30,6 @@
 - name: downstairs_living_morning_sunrise
   entities:
     light.eethoek: false
-    light.woonkamer: false
     light.keuken: false
     light.upstairs_corridor: false
     switch.bedroom_lamp_tv: false
