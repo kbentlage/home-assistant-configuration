@@ -53,6 +53,170 @@ switch:
     payload_off: 'off'
     retain: True
 
+sensor:
+  # Smartmeter readings
+  - unique_id: power_usage
+    state_topic: dsmr/reading/electricity_currently_delivered
+    unit_of_measurement: kWh
+    value_template: '{{ value | float }}'
+
+  - unique_id: power_usage_low
+    state_topic: dsmr/reading/electricity_delivered_1
+    unit_of_measurement: kWh
+    value_template: '{{ value | float }}'
+
+  - unique_id: power_usage_high
+    state_topic: dsmr/reading/electricity_delivered_2
+    unit_of_measurement: kWh
+    value_template: '{{ value | float }}'
+
+  - unique_id: power_tariff
+    state_topic: dsmr/meter-stats/electricity_tariff
+    value_template: '{% if value | int == 1 %}Laag{% elif value | int == 2 %}Hoog{% else %}Onbekend{% endif %}'
+
+  - unique_id: power_generated
+    state_topic: dsmr/reading/electricity_currently_returned
+    unit_of_measurement: kWh
+    value_template: '{{ value | float }}'
+
+  - unique_id: power_generated_low
+    state_topic: dsmr/reading/electricity_returned_1
+    unit_of_measurement: kWh
+    value_template: '{{ value | float }}'
+
+  - unique_id: power_generated_high
+    state_topic: dsmr/reading/electricity_returned_2
+    unit_of_measurement: kWh
+    value_template: '{{ value | float }}'
+
+  - unique_id: gas_usage
+    state_topic: dsmr/reading/extra_device_delivered
+    unit_of_measurement: m3
+    value_template: '{{ value | float }}'
+
+  # Smartmeter day consumption
+  - unique_id: power_day_usage
+    state_topic: dsmr/day-consumption/electricity_merged
+    unit_of_measurement: kWh
+    value_template: '{{ value | float }}'
+
+  - unique_id: power_day_usage_low
+    state_topic: dsmr/day-consumption/electricity1
+    unit_of_measurement: kWh
+    value_template: '{{ value | float }}'
+
+  - unique_id: power_day_usage_high
+    state_topic: dsmr/day-consumption/electricity2
+    unit_of_measurement: kWh
+    value_template: '{{ value | float }}'
+
+  - unique_id: power_day_usage_cost
+    state_topic: dsmr/day-consumption/electricity_cost_merged
+    unit_of_measurement: EUR
+    value_template: '{{ value | float }}'
+
+  - unique_id: power_day_usage_low_cost
+    state_topic: dsmr/day-consumption/electricity1_cost
+    unit_of_measurement: EUR
+    value_template: '{{ value | float }}'
+
+  - unique_id: power_day_usage_high_cost
+    state_topic: dsmr/day-consumption/electricity2_cost
+    unit_of_measurement: EUR
+    value_template: '{{ value | float }}'
+
+  - unique_id: power_day_generated
+    state_topic: dsmr/day-consumption/electricity_returned_merged
+    unit_of_measurement: kWh
+    value_template: '{{ value | float }}'
+
+  - unique_id: power_day_generated_low
+    state_topic: dsmr/day-consumption/electricity1_returned
+    unit_of_measurement: kWh
+    value_template: '{{ value | float }}'
+
+  - unique_id: power_day_generated_high
+    state_topic: dsmr/day-consumption/electricity2_returned
+    unit_of_measurement: kWh
+    value_template: '{{ value | float }}'
+
+  - unique_id: gas_day_usage
+    state_topic: dsmr/day-consumption/gas
+    unit_of_measurement: m3
+    value_template: '{{ value | float }}'
+
+  - unique_id: gas_day_usage_cost
+    state_topic: dsmr/day-consumption/gas_cost
+    unit_of_measurement: EUR
+    value_template: '{{ value | float }}'
+
+  - unique_id: energy_day_usage_cost
+    state_topic: dsmr/day-consumption/total_cost
+    unit_of_measurement: EUR
+    value_template: '{{ value | float }}'
+
+  # Watermeter
+  - unique_id: water_usage
+    state_topic: watermeter/reading
+    unit_of_measurement: m3
+    value_template: '{{ value | float }}'
+
+  # Plugwise
+  - unique_id: fusebox_network_usage
+    state_topic: 'plugwise2py/state/power/000D6F0001A44529'
+    unit_of_measurement: 'W'
+    value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
+
+  - unique_id: garage_server_usage
+    state_topic: 'plugwise2py/state/power/000D6F0001A44529'
+    unit_of_measurement: 'W'
+    value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
+
+  - unique_id: kitchen_espressomachine_usage
+    state_topic: 'plugwise2py/state/power/000D6F000397AAEF'
+    unit_of_measurement: 'W'
+    value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
+
+  - unique_id: garage_freezer_usage
+    state_topic: 'plugwise2py/state/power/000D6F0003979084'
+    unit_of_measurement: 'W'
+    value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
+
+  - unique_id: garage_refrigerator_usage
+    state_topic: 'plugwise2py/state/power/000D6F00004ED25A'
+    unit_of_measurement: 'W'
+    value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
+
+  - unique_id: attic_washingmachine_usage
+    state_topic: 'plugwise2py/state/power/000D6F00004EF088'
+    unit_of_measurement: 'W'
+    value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
+
+  - unique_id: attic_heating_usage
+    state_topic: 'plugwise2py/state/power/000D6F00025F6796'
+    unit_of_measurement: 'W'
+    value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
+
+  - unique_id: upstairs_bedroom_charger_kevin
+    state_topic: 'plugwise2py/state/power/000D6F00001C7B58'
+    unit_of_measurement: 'W'
+    value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
+
+  - unique_id: attic_airco_usage
+    state_topic: 'plugwise2py/state/power/000D6F000059A9F1'
+    unit_of_measurement: 'W'
+    value_template: '{{ value_json.power if value_json.power > 0 else 0 }}'
+
+  # ITHO
+  - unique_id: attic_ventilation_speed
+    state_topic: 'itho/ithostatus'
+    value_template: "{{ value_json['Speed status'] }}"
+
+  - unique_id: attic_ventilation_speed_rpm
+    state_topic: 'itho/ithostatus'
+    unit_of_measurement: 'rpm'
+    value_template: "{{ value_json['Fan speed (rpm)'] }}"
+
 fan:
   - unique_id: nrg-itho-1
     name: attic_ventilation
