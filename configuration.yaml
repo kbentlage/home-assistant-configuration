@@ -47,22 +47,6 @@ tts:
     cache_dir: /tmp/tts
     time_memory: 300
 
-# MQTT
-mqtt:
-  broker: !secret mqtt_host
-  client_id: home-assistant
-  keepalive: 60
-  birth_message:
-    topic: 'ha/hass/status'
-    payload: 'online'
-    qos: 1
-    retain: true
-  will_message:
-    topic: 'ha/hass/status'
-    payload: 'offline'
-    qos: 1
-    retain: true
-
 # WebOS TV
 webostv:
   host: !secret tv_host
@@ -78,7 +62,6 @@ heos:
 
 group: !include configuration/group.yaml
 sensor: !include configuration/sensor.yaml
-switch: !include configuration/switch.yaml
 zone: !include configuration/zone.yaml
 scene: !include configuration/scene.yaml
 automation: !include_dir_merge_list configuration/automation/
@@ -90,4 +73,4 @@ sonos: !include configuration/sonos.yaml
 media_player: !include configuration/media_player.yaml
 utility_meter: !include configuration/utility_meter.yaml
 camera: !include configuration/camera.yaml
-fan: !include configuration/fan.yaml
+mqtt: !include configuration/mqtt.yaml

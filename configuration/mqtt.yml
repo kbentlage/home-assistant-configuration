@@ -1,0 +1,71 @@
+---
+broker: !secret mqtt_host
+client_id: home-assistant
+keepalive: 60
+birth_message:
+  topic: 'ha/hass/status'
+  payload: 'online'
+  qos: 1
+  retain: true
+will_message:
+  topic: 'ha/hass/status'
+  payload: 'offline'
+  qos: 1
+  retain: true
+
+switch:
+  - unique_id: downstairs_dining_christmastree
+    optimistic: False
+    command_topic: 'shellies/shelly01/relay/0/command'
+    state_topic: 'shellies/shelly01/relay/0'
+    json_attributes_topic: 'shellies/shelly01/info'
+    payload_on: 'on'
+    payload_off: 'off'
+    retain: True
+
+  - unique_id: ownstairs_living_christmastree
+    optimistic: False
+    command_topic: 'shellies/shelly02/relay/0/command'
+    state_topic: 'shellies/shelly02/relay/0'
+    json_attributes_topic: 'shellies/shelly02/info'
+    payload_on: 'on'
+    payload_off: 'off'
+    retain: True
+
+  - unique_id: downstairs_backyard_christmas_lights
+    state_topic: "tasmota/sonoff01/stat/RESULT"
+    value_template: "{{ value_json.POWER }}"
+    command_topic: "tasmota/sonoff01/cmnd/POWER"
+    payload_on: "ON"
+    payload_off: "OFF"
+    availability_topic: "tasmota/sonoff01/tele/LWT"
+    payload_available: "Online"
+    payload_not_available: "Offline"
+    qos: 1
+    retain: True
+
+  - unique_id: downstairs_frontyard_christmas_lights
+    optimistic: False
+    command_topic: 'shellies/shelly04/relay/0/command'
+    state_topic: 'shellies/shelly04/relay/0'
+    json_attributes_topic: 'shellies/shelly04/info'
+    payload_on: 'on'
+    payload_off: 'off'
+    retain: True
+
+fan:
+  - unique_id: nrg-itho-1
+    name: attic_ventilation
+    device:
+      identifiers: nrg-itho-1
+      model: ITHO Wifi Add-on
+      name: ITHO-WIFI
+    availability_topic: itho/lwt
+    state_topic: itho/lwt
+    state_value_template: '{% if value == ''online'' %}ON{% else %}OFF{% endif %}'
+    json_attributes_topic: itho/ithostatus
+    command_topic: itho/cmd/not_used/but_needed_for_HA
+    percentage_command_topic: itho/cmd
+    percentage_command_template: '{{ value * 2.54 }}'
+    percentage_state_topic: itho/state
+    percentage_value_template: '{{ ((value | int) / 2.54) | round}}'
