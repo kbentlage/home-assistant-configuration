@@ -8,6 +8,7 @@ tracker_kevin:
 tracker_amrita:
   name: Amrita
   entities:
+    - device_tracker.phone_amrita_app
     - device_tracker.phone_amrita_wifi
 
 people:
