@@ -44,7 +44,7 @@
     after_offset: "-00:45:00"
   action:
     service: scene.turn_on
-    entity_id: scene.downstairs_living_watchtv
+    entity_id: scene.woonkamer_tv
 
 - alias: 'Living room lights to evening mode when TV turned off'
   initial_state: on
@@ -59,7 +59,7 @@
     after_offset: "-00:45:00"
   action:
     service: scene.turn_on
-    entity_id: scene.downstairs_living_evening
+    entity_id: scene.woonkamer_gedimd
 
 - alias: 'Kitchen lights on before sunrise'
   initial_state: on
