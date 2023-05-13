@@ -1,8 +1,4 @@
 ---
-broker: !secret mqtt_host
-client_id: home-assistant
-keepalive: 60
-
 switch:
   - object_id: downstairs_dining_christmastree
     optimistic: False
