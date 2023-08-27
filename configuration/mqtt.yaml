@@ -9,7 +9,7 @@ switch:
     payload_off: 'off'
     retain: True
 
-  - object_id: ownstairs_living_christmastree
+  - object_id: downstairs_living_christmastree
     optimistic: False
     command_topic: 'shellies/shelly02/relay/0/command'
     state_topic: 'shellies/shelly02/relay/0'
