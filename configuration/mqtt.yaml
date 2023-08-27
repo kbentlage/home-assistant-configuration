@@ -39,6 +39,15 @@ switch:
     payload_off: 'off'
     retain: True
 
+  - object_id: downstairs_backyard_tile_lights
+    optimistic: False
+    command_topic: 'shellies/shelly05/relay/0/command'
+    state_topic: 'shellies/shelly05/relay/0'
+    json_attributes_topic: 'shellies/shelly05/info'
+    payload_on: 'on'
+    payload_off: 'off'
+    retain: True
+
 sensor:
   # Smartmeter readings
   - object_id: power_usage
