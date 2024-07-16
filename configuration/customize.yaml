@@ -125,9 +125,9 @@ sensor.water_day_usage_cost:
   icon: mdi:currency-eur
 
 # Sensor usage
-sensor.fusebox_server_usage:
-  friendly_name: Server
-  icon: mdi:server
+sensor.fusebox_network_usage:
+  friendly_name: Meterkast
+  icon: mdi:fuse
 sensor.kitchen_espressomachine_usage:
   friendly_name: Espresso machine
   icon: mdi:coffee
