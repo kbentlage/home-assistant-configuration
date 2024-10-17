@@ -265,3 +265,8 @@ device_tracker.iphoneamrita_app:
 device_tracker.318i:
   friendly_name: Auto
   icon: mdi:car-sports
+
+# Input boolean
+input_boolean.phone_charging_kevin:
+  friendly_name: iPhone Kevin laden
+  icon: mdi:cellphone-iphone

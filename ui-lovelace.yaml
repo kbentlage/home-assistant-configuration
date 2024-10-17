@@ -210,6 +210,7 @@ views:
         show_header_toggle: true
         entities:
           - light.upstairs_bedroom
+          - input_boolean.phone_charging_kevin
           - climate.slaapkamer
 
       - title: Kantoor
